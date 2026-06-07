@@ -471,9 +471,31 @@
 function submitWaitlist(e) {
   e.preventDefault();
   var email = document.getElementById('waitlist-email').value;
-  document.getElementById('waitlist-form').style.display = 'none';
-  document.getElementById('waitlist-thanks').style.display = 'block';
-  localStorage.setItem('thriveiq_waitlist', email);
+  var btn = e.target.querySelector('button');
+  btn.textContent = '...';
+  btn.disabled = true;
+
+  fetch('https://api.brevo.com/v3/contacts', {
+    method: 'POST',
+    headers: {
+      'accept': 'application/json',
+      'content-type': 'application/json',
+      'api-key': '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'
+    },
+    body: JSON.stringify({
+      email: email,
+      listIds: [7],
+      updateEnabled: true
+    })
+  })
+  .then(function(res) {
+    document.getElementById('waitlist-form').style.display = 'none';
+    document.getElementById('waitlist-thanks').style.display = 'block';
+  })
+  .catch(function() {
+    document.getElementById('waitlist-form').style.display = 'none';
+    document.getElementById('waitlist-thanks').style.display = 'block';
+  });
 }
 </script>
 
