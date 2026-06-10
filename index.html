@@ -805,7 +805,82 @@ function submitWaitlist(e) {
 
 
 
-<!-- DOCTOR REPORT PREVIEW -->
+<!-- DOCTOR REPORT PREVIEW REPLACED -->
+<!-- DOCTOR VISIT REPORT SECTION -->
+<section style="padding:80px 5%;background:#111118;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:56px;">
+      <div style="font-size:11px;letter-spacing:3px;color:#1D9E75;font-family:'Courier New',monospace;text-transform:uppercase;margin-bottom:16px;">The Output</div>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:white;line-height:1.2;margin-bottom:16px;">Walk in with evidence.<br/>Not just symptoms.</h2>
+      <p style="font-size:17px;color:rgba(255,255,255,0.55);max-width:640px;margin:0 auto;line-height:1.8;">One tap pulls together everything you've been tracking — meals, symptoms, labs, and meds — so your doctor can act, not guess.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+
+      <!-- Left: what's in the report -->
+      <div>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">✨</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Questions written for you — from your data</div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">You don't have to know the right medical words. ThriveIQ reads your data and tells you exactly what to ask.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">😣</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Your symptoms, with proof</div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">Not "I've been tired" — but fatigue 18 out of 30 days, severity 6.2/10, primarily afternoon, correlating with low-quality meals.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🩸</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Lab trends over time</div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">See where you started and where you are now — fasting insulin, HOMA-IR, Vitamin D, cholesterol ratios — with arrows showing whether things are improving.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🔗</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Food & symptom connections</div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">ThriveIQ spots patterns it would take a doctor months to notice — like bloating following dairy 71% of the time.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">💊</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Everything you're taking — and how it's working</div>
+              <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">Every med and supplement with dose, timing, and compliance rate — plus educational notes to help you ask better questions.</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+          <span style="background:rgba(29,158,117,0.12);border:1px solid rgba(29,158,117,0.3);color:#1D9E75;padding:6px 14px;border-radius:100px;font-size:11px;font-family:'Courier New',monospace;font-weight:600;">30-day report FREE</span>
+          <span style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.5);padding:6px 14px;border-radius:100px;font-size:11px;font-family:'Courier New',monospace;">Email to doctor · Premium</span>
+        </div>
+      </div>
+
+      <!-- Right: sample report iframe -->
+      <div style="background:#1a1a24;border:1px solid rgba(29,158,117,0.25);border-radius:16px;overflow:hidden;box-shadow:0 0 60px rgba(29,158,117,0.08);">
+        <div style="background:#111118;padding:10px 16px;display:flex;align-items:center;gap:6px;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+          <div style="margin-left:8px;font-family:'Courier New',monospace;font-size:10px;color:rgba(255,255,255,0.3);">thriveiq-doctor-report.pdf</div>
+        </div>
+        <iframe src="thriveiq-doctor-report-template.html" style="width:100%;height:560px;border:none;" scrolling="yes" title="ThriveIQ Doctor Visit Report Sample"></iframe>
+        <div style="padding:16px;text-align:center;border-top:1px solid rgba(255,255,255,0.06);">
+          <a href="thriveiq-doctor-report-template.html" target="_blank" style="display:inline-block;background:#1D9E75;color:white;padding:10px 24px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;font-family:'DM Sans',sans-serif;">View Full Sample Report →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- END NEW DOCTOR SECTION -->
+<!--
 <section style="padding:80px 5%;background:#0A0A0F;">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:48px;">
