@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThriveIQ — Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0A0A0F;
+    --surface: #111118;
+    --surface2: #1a1a24;
+    --teal: #1D9E75;
+    --teal-dim: rgba(29,158,117,0.15);
+    --teal-border: rgba(29,158,117,0.3);
+    --white: #FFFFFF;
+    --mid: rgba(255,255,255,0.55);
+    --dim: rgba(255,255,255,0.25);
+    --border: rgba(255,255,255,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 112px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 44px; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,15,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-wordmark { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: white; }
+  .nav-wordmark span { color: var(--teal); }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: white; }
+  .nav-cta { background: var(--teal) !important; color: white !important; padding: 10px 22px; border-radius: 100px; font-weight: 600 !important; font-size: 13px !important; }
+
+  /* WAITLIST BANNER */
+  #waitlist-banner {
+    background: linear-gradient(90deg, #0F6E56, #1D9E75);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px; flex-wrap: wrap;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    height: 44px;
+  }
+  #waitlist-banner p { font-size: 13px; color: white; font-weight: 500; }
+
+  /* HERO */
+  .hero {
+    text-align: center;
+    padding: 80px 5% 64px;
+  }
+  .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 3px;
+    color: var(--teal); text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 56px);
+    font-weight: 700; line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: italic; color: var(--teal); }
+  .hero p {
+    font-size: 17px; color: var(--mid);
+    max-width: 540px; margin: 0 auto 48px;
+    line-height: 1.8;
+  }
+
+  /* TOGGLE */
+  .billing-toggle {
+    display: inline-flex;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px;
+    gap: 4px;
+    margin-bottom: 56px;
+  }
+  .billing-toggle button {
+    background: none; border: none; cursor: pointer;
+    padding: 8px 20px; border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px; font-weight: 500;
+    color: var(--mid); transition: all 0.2s;
+  }
+  .billing-toggle button.active {
+    background: var(--teal); color: white;
+  }
+  .save-badge {
+    display: inline-block;
+    background: rgba(29,158,117,0.2);
+    border: 1px solid var(--teal-border);
+    color: var(--teal);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 1px;
+    padding: 3px 8px; border-radius: 100px;
+    margin-left: 8px; vertical-align: middle;
+  }
+
+  /* PRICING GRID */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5% 80px;
+  }
+
+  .plan-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 28px;
+    display: flex; flex-direction: column;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .plan-card:hover { border-color: rgba(29,158,117,0.3); }
+  .plan-card.featured {
+    background: var(--surface2);
+    border-color: var(--teal);
+    box-shadow: 0 0 40px rgba(29,158,117,0.12);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -13px; left: 50%; transform: translateX(-50%);
+    background: var(--teal);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 16px; border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .plan-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+
+  .plan-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 700;
+    color: white; line-height: 1;
+    margin-bottom: 4px;
+  }
+  .plan-price sup { font-size: 24px; vertical-align: super; }
+  .plan-price .period { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 400; color: var(--mid); }
+
+  .plan-desc {
+    font-size: 13px; color: var(--mid);
+    line-height: 1.6; margin-bottom: 28px;
+    min-height: 48px;
+  }
+
+  .plan-divider {
+    height: 1px; background: var(--border);
+    margin-bottom: 24px;
+  }
+
+  .feature-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 12px;
+    flex: 1;
+    margin-bottom: 32px;
+  }
+  .feature-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+  }
+  .feature-list li .check {
+    color: var(--teal); font-size: 14px;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .feature-list li .dim { color: var(--dim); }
+  .feature-list li.section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 8px;
+  }
+
+  .plan-cta {
+    display: block; width: 100%;
+    padding: 14px 24px; border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 600;
+    text-align: center; text-decoration: none;
+    cursor: pointer; border: none;
+    transition: all 0.2s;
+  }
+  .plan-cta.primary {
+    background: var(--teal); color: white;
+  }
+  .plan-cta.primary:hover { background: #22b887; }
+  .plan-cta.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--mid);
+  }
+  .plan-cta.secondary:hover { border-color: var(--teal); color: white; }
+
+  .cta-subtext {
+    text-align: center;
+    font-size: 11px; color: var(--dim);
+    font-family: 'DM Mono', monospace;
+    margin-top: 10px;
+  }
+
+  /* COMPARISON TABLE */
+  .comparison {
+    max-width: 900px; margin: 0 auto;
+    padding: 0 5% 80px;
+  }
+  .comparison h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 700;
+    text-align: center; margin-bottom: 48px;
+  }
+  .comparison h2 em { color: var(--teal); font-style: italic; }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    font-size: 13px;
+  }
+  thead th {
+    padding: 12px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--teal);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+  thead th:first-child { text-align: left; }
+  tbody tr { border-bottom: 1px solid rgba(255,255,255,0.04); }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  tbody td {
+    padding: 12px 16px;
+    color: rgba(255,255,255,0.65);
+    text-align: center;
+  }
+  tbody td:first-child { text-align: left; color: rgba(255,255,255,0.85); }
+  .tbl-section td {
+    padding: 20px 16px 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--dim);
+    background: none;
+  }
+  .tick { color: var(--teal); font-size: 16px; }
+  .cross { color: rgba(255,255,255,0.2); font-size: 14px; }
+
+  /* FAQ */
+  .faq {
+    max-width: 680px; margin: 0 auto;
+    padding: 0 5% 80px;
+  }
+  .faq h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; text-align: center;
+    margin-bottom: 40px;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-q {
+    font-size: 15px; font-weight: 600;
+    color: white; margin-bottom: 8px;
+    cursor: pointer;
+  }
+  .faq-a {
+    font-size: 14px; color: var(--mid);
+    line-height: 1.7;
+  }
+
+  /* BOTTOM CTA */
+  .bottom-cta {
+    text-align: center;
+    padding: 80px 5%;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+  .bottom-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 700; margin-bottom: 16px;
+  }
+  .bottom-cta h2 em { color: var(--teal); font-style: italic; }
+  .bottom-cta p { font-size: 16px; color: var(--mid); margin-bottom: 32px; }
+  .bottom-cta a {
+    display: inline-block;
+    background: var(--teal); color: white;
+    padding: 16px 40px; border-radius: 100px;
+    font-size: 16px; font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .bottom-cta a:hover { background: #22b887; }
+  .bottom-cta .sub {
+    margin-top: 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--dim);
+    letter-spacing: 1px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 24px 5%;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; }
+  .footer-logo span { color: var(--teal); }
+  footer p { font-size: 12px; color: var(--dim); }
+
+  @media (max-width: 900px) {
+    .pricing-grid { grid-template-columns: 1fr; max-width: 440px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- WAITLIST BANNER -->
+<div id="waitlist-banner">
+  <p>🚀 App launching soon on the App Store — be first to know when it drops.</p>
+  <a href="index.html" style="background:white;color:#0F6E56;padding:6px 16px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;">Join Waitlist</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-wordmark">Thrive<span>IQ</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#story">My Story</a></li>
+    <li><a href="index.html#features">Features</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#mission">Mission</a></li>
+    <li><a href="pricing.html" style="color:white;">Pricing</a></li>
+    <li><a href="index.html" class="nav-cta">Download App</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">Pricing</div>
+  <h1>Your health data,<br/><em>finally working for you.</em></h1>
+  <p>Start free. No hardware required. Cancel anytime. Your data is always yours.</p>
+
+  <div class="billing-toggle">
+    <button class="active" onclick="setBilling('monthly')">Monthly</button>
+    <button onclick="setBilling('annual')">Annual <span class="save-badge">Save 20%</span></button>
+  </div>
+</div>
+
+<!-- PRICING CARDS -->
+<div class="pricing-grid">
+
+  <!-- FREE -->
+  <div class="plan-card">
+    <div class="plan-name">Free</div>
+    <div class="plan-price"><sup>$</sup>0<span class="period"> / month</span></div>
+    <div class="plan-desc">Try ThriveIQ. Get hooked on understanding what your food is actually doing.</div>
+    <div class="plan-divider"></div>
+    <ul class="feature-list">
+      <li class="section-label"><span>Food</span></li>
+      <li><span class="check">✓</span> Meal photo analysis — 3 scans/day</li>
+      <li><span class="check">✓</span> Manual food logging — unlimited</li>
+      <li><span class="check">✓</span> ThriveIQ food quality score</li>
+      <li><span class="check">✓</span> Basic meal plan — no swaps</li>
+      <li class="section-label"><span>Health Tracking</span></li>
+      <li><span class="check">✓</span> Symptom logging — unlimited</li>
+      <li><span class="check">✓</span> Bowel tracker</li>
+      <li><span class="check">✓</span> Sleep log — basic</li>
+      <li><span class="check">✓</span> Hydration tracking — basic</li>
+      <li><span class="check">✓</span> Lab entry + optimal vs conventional ranges</li>
+      <li><span class="check">✓</span> Core biomarker dashboard</li>
+      <li class="section-label"><span>Doctor Report</span></li>
+      <li><span class="check">✓</span> 1 Doctor Visit Report / month</li>
+      <li><span class="dim">✗</span> <span class="dim">PDF download</span></li>
+      <li><span class="dim">✗</span> <span class="dim">Pattern detection</span></li>
+      <li class="section-label"><span>Other</span></li>
+      <li><span class="check">✓</span> HealthKit integration</li>
+      <li><span class="check">✓</span> No ads. Ever.</li>
+    </ul>
+    <a href="index.html" class="plan-cta secondary">Download Free</a>
+  </div>
+
+  <!-- PRO -->
+  <div class="plan-card featured">
+    <div class="popular-badge">Most Popular</div>
+    <div class="plan-name">Pro</div>
+    <div class="plan-price" id="pro-price"><sup>$</sup>8.99<span class="period"> / month</span></div>
+    <div class="plan-desc">Your full health intelligence layer. Patterns, correlations, and unlimited reports.</div>
+    <div class="plan-divider"></div>
+    <ul class="feature-list">
+      <li class="section-label"><span>Everything in Free, plus:</span></li>
+      <li><span class="check">✓</span> Meal photo analysis — unlimited</li>
+      <li><span class="check">✓</span> Full daily meal plan + 3 swap alternatives</li>
+      <li><span class="check">✓</span> Pattern detection — food + symptom + lab</li>
+      <li><span class="check">✓</span> ThriveIQ Detected cards</li>
+      <li><span class="check">✓</span> Food-drug interaction flags</li>
+      <li><span class="check">✓</span> Packaged food ingredient alerts</li>
+      <li><span class="check">✓</span> Lab-to-food meal plan correlation</li>
+      <li><span class="check">✓</span> Full metabolic + thyroid + inflammation biomarkers</li>
+      <li><span class="check">✓</span> Unlimited Doctor Visit Reports + PDF</li>
+      <li><span class="check">✓</span> Full Questions for Your Doctor</li>
+      <li><span class="check">✓</span> Weekly ThriveIQ Summary</li>
+      <li><span class="check">✓</span> Symptom-triggered hydration tips</li>
+      <li><span class="check">✓</span> Weight trend tracking</li>
+      <li><span class="check">✓</span> Medications & Supplements tracker</li>
+      <li><span class="check">✓</span> Food + How I Felt timeline</li>
+      <li><span class="check">✓</span> HealthKit integration</li>
+      <li><span class="check">✓</span> No ads. Ever.</li>
+    </ul>
+    <a href="index.html" class="plan-cta primary" id="pro-cta">Start Pro — $8.99/month</a>
+    <div class="cta-subtext">Cancel anytime. Your data is always yours.</div>
+  </div>
+
+  <!-- PREMIUM -->
+  <div class="plan-card">
+    <div class="plan-name">Premium</div>
+    <div class="plan-price" id="premium-price"><sup>$</sup>14.99<span class="period"> / month</span></div>
+    <div class="plan-desc">Maximum intelligence for complex health situations. Every marker, every pattern, every trend.</div>
+    <div class="plan-divider"></div>
+    <ul class="feature-list">
+      <li class="section-label"><span>Everything in Pro, plus:</span></li>
+      <li><span class="check">✓</span> Priority AI processing</li>
+      <li><span class="check">✓</span> Full biomarker dashboard — 40+ markers</li>
+      <li><span class="check">✓</span> Hormone panel tracking</li>
+      <li><span class="check">✓</span> CBC — complete blood count</li>
+      <li><span class="check">✓</span> Liver & kidney panel</li>
+      <li><span class="check">✓</span> Advanced triple-combo pattern detection</li>
+      <li><span class="check">✓</span> Lab trend lines — visual history</li>
+      <li><span class="check">✓</span> Symptom pattern charts</li>
+      <li><span class="check">✓</span> Medication review in Doctor Report</li>
+      <li><span class="check">✓</span> Multiple Doctor Reports per week</li>
+      <li><span class="check">✓</span> CSV data export</li>
+      <li><span class="check">✓</span> Early access to new features</li>
+      <li><span class="check">✓</span> All wearables — Oura, Garmin, Whoop, Fitbit</li>
+      <li><span class="check">✓</span> No ads. Ever.</li>
+    </ul>
+    <a href="index.html" class="plan-cta secondary" id="premium-cta">Start Premium — $14.99/month</a>
+    <div class="cta-subtext">Cancel anytime. Your data is always yours.</div>
+  </div>
+
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+  <h2>Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q">Is my health data private?</div>
+    <div class="faq-a">Yes. Your data is encrypted in transit and at rest. ThriveIQ will never sell or share your health data. You can delete all your data from the app at any time.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Do I need any hardware or devices?</div>
+    <div class="faq-a">No hardware required. ThriveIQ works entirely from your phone. You can optionally connect Apple Health on any plan. Oura, Garmin, Whoop, and Fitbit integrations are available on Premium.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can I cancel anytime?</div>
+    <div class="faq-a">Yes. Cancel anytime from the app or App Store settings. Your data stays accessible until the end of your billing period and can always be exported.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is ThriveIQ a medical device?</div>
+    <div class="faq-a">No. ThriveIQ is a personal wellness tracking tool, not a medical device. All content is educational. Always discuss your health data and symptoms with a qualified healthcare provider.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What's the difference between optimal and conventional ranges?</div>
+    <div class="faq-a">Conventional lab ranges are set by testing large populations — they show what's common, not what's optimal. ThriveIQ shows both so you can have an informed conversation with your doctor about where you stand.</div>
+  </div>
+</div>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <h2>Your body has been telling you something.<br/><em>It's time to listen.</em></h2>
+  <p>Start free. No credit card required. No hardware.</p>
+  <a href="index.html">Download ThriveIQ Free</a>
+  <div class="sub">Available on iOS · Android coming soon</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Thrive<span>IQ</span></div>
+  <p>© 2026 ThriveIQ · thriveiq.app · Not medical advice</p>
+  <div style="display:flex;gap:16px;">
+    <a href="thriveiq-privacy-policy.html" style="font-size:12px;color:rgba(255,255,255,0.3);text-decoration:none;">Privacy</a>
+    <a href="thriveiq-terms-of-use.html" style="font-size:12px;color:rgba(255,255,255,0.3);text-decoration:none;">Terms</a>
+  </div>
+</footer>
+
+<script>
+  function setBilling(type) {
+    const btns = document.querySelectorAll('.billing-toggle button');
+    btns.forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+
+    if (type === 'annual') {
+      document.getElementById('pro-price').innerHTML = '<sup>$</sup>7.19<span class="period"> / month</span><div style="font-size:11px;color:rgba(29,158,117,0.8);font-family:\'DM Mono\',monospace;margin-top:4px;">$86.28 billed annually</div>';
+      document.getElementById('premium-price').innerHTML = '<sup>$</sup>11.99<span class="period"> / month</span><div style="font-size:11px;color:rgba(29,158,117,0.8);font-family:\'DM Mono\',monospace;margin-top:4px;">$143.88 billed annually</div>';
+      document.getElementById('pro-cta').textContent = 'Start Pro — $7.19/month';
+      document.getElementById('premium-cta').textContent = 'Start Premium — $11.99/month';
+    } else {
+      document.getElementById('pro-price').innerHTML = '<sup>$</sup>8.99<span class="period"> / month</span>';
+      document.getElementById('premium-price').innerHTML = '<sup>$</sup>14.99<span class="period"> / month</span>';
+      document.getElementById('pro-cta').textContent = 'Start Pro — $8.99/month';
+      document.getElementById('premium-cta').textContent = 'Start Premium — $14.99/month';
+    }
+  }
+</script>
+
+</body>
+</html>
