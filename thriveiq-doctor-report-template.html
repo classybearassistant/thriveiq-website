@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ThriveIQ Doctor Visit Report</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, serif; background: #ffffff; color: #1a1a1a; font-size: 14px; line-height: 1.6; }
+  .report-header { background: #0A0A0F; padding: 32px 48px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .wordmark { font-family: Georgia, serif; font-size: 36px; font-weight: 700; color: white; }
+  .wordmark span { color: #1D9E75; }
+  .tagline { font-family: Georgia, serif; font-size: 12px; font-style: italic; color: rgba(255,255,255,0.6); margin-top: 3px; }
+  .report-meta { text-align: right; color: rgba(255,255,255,0.7); font-family: 'Courier New', monospace; font-size: 11px; }
+  .report-label { font-size: 13px; color: #1D9E75; font-weight: bold; letter-spacing: 2px; margin-bottom: 4px; }
+  .header-divider { height: 3px; background: linear-gradient(90deg, #1D9E75 0%, #0A0A0F 100%); }
+  .patient-banner { background: #f8fffe; border-left: 4px solid #1D9E75; padding: 16px 48px; display: flex; gap: 48px; align-items: center; border-bottom: 1px solid #e8e8e8; }
+  .field-label { font-size: 10px; letter-spacing: 2px; color: #888; font-family: 'Courier New', monospace; text-transform: uppercase; }
+  .field-value { font-size: 15px; font-weight: bold; color: #0A0A0F; margin-top: 2px; }
+  .report-body { padding: 32px 48px; }
+  .section { margin-bottom: 32px; }
+  .section-title { font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 3px; color: #1D9E75; text-transform: uppercase; border-bottom: 1px solid #e0e0e0; padding-bottom: 8px; margin-bottom: 16px; }
+  .data-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f5f5f5; align-items: center; }
+  .data-label { color: #444; font-size: 13px; }
+  .data-value { font-weight: bold; font-size: 13px; color: #0A0A0F; }
+  .data-value.optimal { color: #1D9E75; }
+  .data-value.flagged { color: #c0392b; }
+  .data-value.borderline { color: #e67e22; }
+  .flag-note { font-size: 11px; color: #888; font-style: italic; margin-top: 2px; }
+  .pattern-card { background: #f8fffe; border: 1px solid #1D9E75; border-radius: 6px; padding: 14px 18px; margin-bottom: 10px; }
+  .pattern-title { font-size: 13px; font-weight: bold; color: #0A0A0F; margin-bottom: 4px; }
+  .pattern-detail { font-size: 12px; color: #555; font-style: italic; }
+  .doctor-q { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; color: #1a1a1a; }
+  .doctor-q::before { content: "→ "; color: #1D9E75; font-weight: bold; }
+  .report-footer { margin-top: 48px; border-top: 1px solid #e0e0e0; padding: 24px 48px; background: #fafafa; }
+  .disclaimer-text { font-size: 11px; color: #888; line-height: 1.7; font-style: italic; max-width: 700px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid #ebebeb; }
+  .footer-logo { font-family: Georgia, serif; font-size: 16px; font-weight: bold; color: #0A0A0F; }
+  .footer-logo span { color: #1D9E75; }
+  .footer-tagline { font-family: Georgia, serif; font-size: 11px; font-style: italic; color: #aaa; }
+  .footer-url { font-family: 'Courier New', monospace; font-size: 11px; color: #1D9E75; }
+</style>
+</head>
+<body>
+<div class="report-header">
+  <div style="display:flex;align-items:center;gap:20px;">
+    <div>
+      <div class="wordmark">Thrive<span>IQ</span></div>
+      <div class="tagline">It's not in your head. It's on your plate.</div>
+    </div>
+  </div>
+  <div class="report-meta">
+    <div class="report-label">DOCTOR VISIT REPORT</div>
+    <div>Generated: <strong style="color:white;">June 9, 2026</strong></div>
+    <div>Report Period: Last 30 days</div>
+    <div style="margin-top:6px;color:#1D9E75;">thriveiq.app</div>
+  </div>
+</div>
+<div class="header-divider"></div>
+<div class="patient-banner">
+  <div><span class="field-label">Patient Name</span><div class="field-value">Alex Rivera</div></div>
+  <div><span class="field-label">Age</span><div class="field-value">42</div></div>
+  <div><span class="field-label">Health Goals</span><div class="field-value">Metabolic health · Gut health · Reduce inflammation</div></div>
+  <div><span class="field-label">Appointment Date</span><div class="field-value">____________</div></div>
+</div>
+<div class="report-body">
+  <div class="section">
+    <div class="section-title">Biomarkers Tracked</div>
+    <div class="data-row"><div><div class="data-label">Vitamin D</div><div class="flag-note">Optimal: 40–60 ng/mL · Conventional normal: 20–100 ng/mL</div></div><div class="data-value optimal">44 ng/mL · Optimal</div></div>
+    <div class="data-row"><div><div class="data-label">Fasting Glucose</div><div class="flag-note">Optimal: 70–85 mg/dL · Conventional normal: 70–99 mg/dL</div></div><div class="data-value borderline">95 mg/dL · Monitor</div></div>
+    <div class="data-row"><div><div class="data-label">Ferritin</div><div class="flag-note">Optimal: 50–150 ng/mL · Conventional normal: 12–150 ng/mL</div></div><div class="data-value flagged">28 ng/mL · Below optimal</div></div>
+  </div>
+  <div class="section">
+    <div class="section-title">Patterns ThriveIQ Detected</div>
+    <div class="pattern-card"><div class="pattern-title">Post-meal fatigue — 4 of last 7 days</div><div class="pattern-detail">Energy drops noted within 2 hours of lunch on days with higher refined carb intake. Food quality scores averaged 61 on affected days vs 79 on unaffected days.</div></div>
+    <div class="pattern-card"><div class="pattern-title">Bloating — Frequent (3+ days this week)</div><div class="pattern-detail">Bloating logged consistently. Dairy appeared in food log on 3 of 4 bloating days. Consider elimination trial.</div></div>
+  </div>
+  <div class="section">
+    <div class="section-title">Questions to Ask Your Doctor</div>
+    <div class="doctor-q">My ferritin is 28 ng/mL. Optimal levels are 50–150. Can we discuss whether supplementation makes sense?</div>
+    <div class="doctor-q">My fasting glucose is 95 — can we run a fasting insulin and HbA1c for a fuller picture?</div>
+    <div class="doctor-q">I've been experiencing post-meal fatigue consistently. Could this relate to blood sugar or food sensitivities?</div>
+    <div class="doctor-q">Can we run a full thyroid panel — TSH, free T3, free T4, and TPO antibodies?</div>
+  </div>
+  <div class="section">
+    <div class="section-title">Symptoms Logged This Period</div>
+    <div class="data-row"><div class="data-label">Fatigue</div><div class="data-value">5 days</div></div>
+    <div class="data-row"><div class="data-label">Bloating</div><div class="data-value">4 days</div></div>
+    <div class="data-row"><div class="data-label">Brain fog</div><div class="data-value">3 days</div></div>
+    <div class="data-row"><div class="data-label">Joint pain</div><div class="data-value">2 days</div></div>
+  </div>
+</div>
+<div class="report-footer">
+  <div class="disclaimer-text">This report was generated by ThriveIQ (thriveiq.app), a personal wellness tracking application. It is not a medical diagnosis or substitute for professional medical advice. Always discuss your health data with a qualified healthcare provider.</div>
+  <div class="footer-bottom">
+    <div><div class="footer-logo">Thrive<span>IQ</span></div><div class="footer-tagline">It's not in your head. It's on your plate.</div></div>
+    <div class="footer-tagline">Patient-generated wellness data · Not for clinical use</div>
+    <div class="footer-url">thriveiq.app</div>
+  </div>
+</div>
+</body>
+</html>
