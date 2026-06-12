@@ -2,100 +2,199 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ThriveIQ Health Conversation Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThriveIQ — My Health Conversation Guide</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: Georgia, serif; background: #ffffff; color: #1a1a1a; font-size: 14px; line-height: 1.6; }
-  .report-header { background: #0A0A0F; padding: 32px 48px 24px; display: flex; align-items: center; justify-content: space-between; }
-  .wordmark { font-family: Georgia, serif; font-size: 36px; font-weight: 700; color: white; }
-  .wordmark span { color: #1D9E75; }
-  .tagline { font-family: Georgia, serif; font-size: 12px; font-style: italic; color: rgba(255,255,255,0.6); margin-top: 3px; }
-  .report-meta { text-align: right; color: rgba(255,255,255,0.7); font-family: 'Courier New', monospace; font-size: 11px; }
-  .report-label { font-size: 13px; color: #1D9E75; font-weight: bold; letter-spacing: 2px; margin-bottom: 4px; }
-  .header-divider { height: 3px; background: linear-gradient(90deg, #1D9E75 0%, #0A0A0F 100%); }
-  .patient-banner { background: #f8fffe; border-left: 4px solid #1D9E75; padding: 16px 48px; display: flex; gap: 48px; align-items: center; border-bottom: 1px solid #e8e8e8; }
-  .field-label { font-size: 10px; letter-spacing: 2px; color: #888; font-family: 'Courier New', monospace; text-transform: uppercase; }
-  .field-value { font-size: 15px; font-weight: bold; color: #0A0A0F; margin-top: 2px; }
-  .report-body { padding: 32px 48px; }
-  .section { margin-bottom: 32px; }
-  .section-title { font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 3px; color: #1D9E75; text-transform: uppercase; border-bottom: 1px solid #e0e0e0; padding-bottom: 8px; margin-bottom: 16px; }
-  .data-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f5f5f5; align-items: center; }
-  .data-label { color: #444; font-size: 13px; }
-  .data-value { font-weight: bold; font-size: 13px; color: #0A0A0F; }
-  .data-value.optimal { color: #1D9E75; }
-  .data-value.flagged { color: #c0392b; }
-  .data-value.borderline { color: #e67e22; }
-  .flag-note { font-size: 11px; color: #888; font-style: italic; margin-top: 2px; }
-  .pattern-card { background: #f8fffe; border: 1px solid #1D9E75; border-radius: 6px; padding: 14px 18px; margin-bottom: 10px; }
-  .pattern-title { font-size: 13px; font-weight: bold; color: #0A0A0F; margin-bottom: 4px; }
-  .pattern-detail { font-size: 12px; color: #555; font-style: italic; }
-  .doctor-q { padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; color: #1a1a1a; }
-  .doctor-q::before { content: "→ "; color: #1D9E75; font-weight: bold; }
-  .report-footer { margin-top: 48px; border-top: 1px solid #e0e0e0; padding: 24px 48px; background: #fafafa; }
-  .disclaimer-text { font-size: 11px; color: #888; line-height: 1.7; font-style: italic; max-width: 700px; }
-  .footer-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid #ebebeb; }
-  .footer-logo { font-family: Georgia, serif; font-size: 16px; font-weight: bold; color: #0A0A0F; }
-  .footer-logo span { color: #1D9E75; }
-  .footer-tagline { font-family: Georgia, serif; font-size: 11px; font-style: italic; color: #aaa; }
-  .footer-url { font-family: 'Courier New', monospace; font-size: 11px; color: #1D9E75; }
+  :root{
+    --teal:#1D9E75;
+    --dark:#0A0A0F;
+    --paper:#FFFFFF;
+    --ink:#1A1A24;
+    --mid:#5A5A66;
+    --line:rgba(29,158,117,0.30);
+    --teal-soft:rgba(29,158,117,0.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#E8E8EC;font-family:-apple-system,'Segoe UI',sans-serif;color:var(--ink);padding:24px 12px;}
+  .page{max-width:760px;margin:0 auto;background:var(--paper);box-shadow:0 4px 24px rgba(0,0,0,0.12);}
+
+  /* Dark brand header */
+  .brand{background:var(--dark);padding:32px 40px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;}
+  .wordmark{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:30px;color:#FFFFFF;}
+  .wordmark span{color:var(--teal);}
+  .tagline{font-family:Georgia,serif;font-style:italic;font-size:13px;color:rgba(255,255,255,0.7);margin-top:4px;}
+  .doc-meta{text-align:right;}
+  .doc-label{font-family:'Courier New',monospace;font-size:12px;letter-spacing:3px;color:var(--teal);text-transform:uppercase;}
+  .doc-meta p{font-size:12px;color:rgba(255,255,255,0.75);margin-top:6px;}
+  .doc-meta a{color:var(--teal);text-decoration:none;font-family:'Courier New',monospace;font-size:12px;}
+  .accent-bar{height:4px;background:var(--teal);}
+
+  .body{padding:36px 40px 28px;}
+
+  /* Title block */
+  h1{font-family:Georgia,serif;font-size:26px;line-height:1.25;}
+  .prepared{font-family:'Courier New',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-top:6px;}
+  .subtitle{font-size:14px;color:var(--mid);margin-top:10px;line-height:1.6;font-style:italic;}
+
+  /* Top disclaimer box */
+  .disclaimer-box{border:1.5px solid var(--line);background:var(--teal-soft);border-radius:10px;padding:16px 18px;margin:22px 0 28px;font-size:12.5px;line-height:1.65;color:var(--ink);}
+  .disclaimer-box strong{font-family:'Courier New',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:6px;}
+
+  /* Patient statement */
+  .statement{font-family:Georgia,serif;font-size:15px;line-height:1.7;border-left:3px solid var(--teal);padding:4px 0 4px 18px;margin-bottom:30px;color:var(--ink);}
+
+  /* Info grid */
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;margin-bottom:34px;}
+  .info-item .label{font-family:'Courier New',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mid);}
+  .info-item .value{font-family:Georgia,serif;font-size:17px;margin-top:5px;line-height:1.4;}
+  .blank-line{display:inline-block;min-width:120px;border-bottom:1px solid var(--mid);}
+
+  /* Sections */
+  h2{font-family:Georgia,serif;font-size:19px;margin:34px 0 6px;padding-top:22px;border-top:1px solid var(--line);}
+  .section-note{font-size:12.5px;color:var(--mid);margin-bottom:16px;line-height:1.55;}
+
+  /* Lab rows */
+  .lab{padding:14px 0;border-bottom:1px solid rgba(0,0,0,0.06);}
+  .lab-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;}
+  .lab-name{font-weight:600;font-size:15px;}
+  .lab-value{font-family:Georgia,serif;font-size:17px;}
+  .pill{display:inline-block;font-family:'Courier New',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-left:8px;vertical-align:middle;}
+  .pill-teal{background:var(--teal-soft);color:var(--teal);border:1px solid var(--line);}
+  .pill-gray{background:rgba(90,90,102,0.08);color:var(--mid);border:1px solid rgba(90,90,102,0.25);}
+  .lab-ranges{font-size:12px;color:var(--mid);margin-top:5px;}
+  .lab-note{font-size:12.5px;color:var(--ink);margin-top:7px;line-height:1.55;}
+
+  /* Pattern cards */
+  .pattern{background:#FAFAFB;border:1px solid rgba(0,0,0,0.06);border-left:3px solid var(--teal);border-radius:8px;padding:16px 18px;margin-bottom:14px;}
+  .pattern h3{font-family:Georgia,serif;font-size:15.5px;margin-bottom:7px;}
+  .pattern p{font-size:13.5px;line-height:1.65;color:var(--ink);}
+
+  /* Symptoms */
+  .symptoms{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:4px;}
+  .symptom{background:#FAFAFB;border:1px solid rgba(0,0,0,0.06);border-radius:8px;padding:13px 15px;display:flex;justify-content:space-between;align-items:baseline;}
+  .symptom .s-name{font-weight:600;font-size:13.5px;}
+  .symptom .s-freq{font-family:'Courier New',monospace;font-size:12px;color:var(--teal);}
+
+  /* Questions */
+  .questions{list-style:none;counter-reset:q;margin-top:4px;}
+  .questions li{counter-increment:q;position:relative;padding:13px 0 13px 44px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:14px;line-height:1.65;}
+  .questions li::before{content:counter(q);position:absolute;left:0;top:12px;width:28px;height:28px;border-radius:50%;background:var(--teal-soft);border:1px solid var(--line);color:var(--teal);font-family:'Courier New',monospace;font-size:12px;display:flex;align-items:center;justify-content:center;}
+
+  /* Watermark band + footer */
+  .watermark{font-family:'Courier New',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mid);text-align:center;padding:14px 20px;border-top:1px dashed rgba(0,0,0,0.15);margin-top:36px;}
+  .footer{background:var(--dark);padding:26px 40px;font-size:11.5px;line-height:1.7;color:rgba(255,255,255,0.65);}
+  .footer .fm{font-family:Georgia,serif;font-style:italic;font-size:13px;color:rgba(255,255,255,0.85);margin-bottom:10px;}
+  .footer .med{color:var(--teal);font-weight:600;}
+  .footer .site{font-family:'Courier New',monospace;color:var(--teal);}
+
+  @media print{body{background:#fff;padding:0;}.page{box-shadow:none;}}
 </style>
 </head>
 <body>
-<div class="report-header">
-  <div style="display:flex;align-items:center;gap:20px;">
+<div class="page">
+
+  <div class="brand">
     <div>
       <div class="wordmark">Thrive<span>IQ</span></div>
       <div class="tagline">It's not in your head. It's on your plate.</div>
     </div>
+    <div class="doc-meta">
+      <div class="doc-label">My Health Conversation Guide</div>
+      <p>Prepared: <strong style="color:#fff;">June 9, 2026</strong></p>
+      <p>Covering: Last 30 days</p>
+      <a href="https://thriveiq.app">thriveiq.app</a>
+    </div>
   </div>
-  <div class="report-meta">
-    <div class="report-label">MY HEALTH CONVERSATION GUIDE</div>
-    <div>Generated: <strong style="color:white;">June 9, 2026</strong></div>
-    <div>Report Period: Last 30 days</div>
-    <div style="margin-top:6px;color:#1D9E75;">thriveiq.app</div>
+  <div class="accent-bar"></div>
+
+  <div class="body">
+
+    <h1>My Health Conversation Guide</h1>
+    <div class="prepared">Prepared by Alex Rivera</div>
+    <p class="subtitle">I put this together to help me have a better conversation with my doctor. All information is self-reported.</p>
+
+    <div class="disclaimer-box">
+      <strong>Please read first</strong>
+      This guide was prepared by Alex Rivera using ThriveIQ, a personal wellness tracking app. All information is self-reported and has not been verified by a healthcare professional. This is not a medical record, clinical assessment, or diagnostic document. Please do not use this document to make clinical decisions.
+    </div>
+
+    <p class="statement">"I've been using a health tracking app to pay more attention to how I feel and what I eat. I wanted to share some of what I've noticed so we can talk about it together."</p>
+
+    <div class="info-grid">
+      <div class="info-item"><div class="label">Name</div><div class="value">Alex Rivera</div></div>
+      <div class="info-item"><div class="label">Age</div><div class="value">42</div></div>
+      <div class="info-item"><div class="label">My Health Goals</div><div class="value">Metabolic health · Gut health · Reduce inflammation</div></div>
+      <div class="info-item"><div class="label">Appointment Date</div><div class="value"><span class="blank-line">&nbsp;</span></div></div>
+    </div>
+
+    <h2>Numbers I've Been Tracking</h2>
+    <p class="section-note">Values I entered from my own lab results. I understand these are self-reported and that my doctor is the right person to interpret them.</p>
+
+    <div class="lab">
+      <div class="lab-top">
+        <span class="lab-name">Vitamin D <span class="pill pill-teal">In range</span></span>
+        <span class="lab-value">44 ng/mL</span>
+      </div>
+      <div class="lab-ranges">Standard range: 20–100 ng/mL · Functional range some practitioners use: 40–60 ng/mL</div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-top">
+        <span class="lab-name">Fasting Glucose <span class="pill pill-gray">Within standard range</span></span>
+        <span class="lab-value">95 mg/dL</span>
+      </div>
+      <div class="lab-ranges">Standard range: 70–99 mg/dL · Functional range some practitioners use: 70–85 mg/dL</div>
+      <div class="lab-note">Within standard range. Functional medicine practitioners sometimes use a narrower range — something I'd like to ask about, since I've been having symptoms.</div>
+    </div>
+
+    <div class="lab">
+      <div class="lab-top">
+        <span class="lab-name">Ferritin <span class="pill pill-gray">Within standard range</span></span>
+        <span class="lab-value">28 ng/mL</span>
+      </div>
+      <div class="lab-ranges">Standard range: 12–150 ng/mL · Functional range some practitioners use: 50–150 ng/mL</div>
+      <div class="lab-note">Within standard range. Functional medicine practitioners sometimes use a narrower range — something I'd like to ask about, since I've been having symptoms.</div>
+    </div>
+
+    <h2>Patterns I've Noticed</h2>
+    <p class="section-note">These are observations from my own logs — what happened and when. I know they aren't conclusions, and I'd like help understanding them.</p>
+
+    <div class="pattern">
+      <h3>My energy drops after lunch</h3>
+      <p>On 4 of the last 7 days, I logged an energy drop within 2 hours of lunch. On those days my meals included more refined carbohydrates and my food quality scores averaged 61, compared with 79 on the days I felt fine.</p>
+    </div>
+
+    <div class="pattern">
+      <h3>Bloating showed up on dairy days</h3>
+      <p>I logged bloating on 4 days this week. Dairy appeared in my food log on 3 of those 4 days. I'd like to ask what the right way is to look into this.</p>
+    </div>
+
+    <h2>How I've Been Feeling</h2>
+    <p class="section-note">What I logged over the last 30 days.</p>
+    <div class="symptoms">
+      <div class="symptom"><span class="s-name">Fatigue</span><span class="s-freq">5 days</span></div>
+      <div class="symptom"><span class="s-name">Bloating</span><span class="s-freq">4 days</span></div>
+      <div class="symptom"><span class="s-name">Brain fog</span><span class="s-freq">3 days</span></div>
+      <div class="symptom"><span class="s-name">Joint pain</span><span class="s-freq">2 days</span></div>
+    </div>
+
+    <h2>Questions I Want to Ask</h2>
+    <p class="section-note">These are questions I've been thinking about and want to make sure I remember to ask:</p>
+    <ol class="questions">
+      <li>My ferritin is 28. I know that's within the standard range — given my fatigue, is it worth a closer look or a retest down the road?</li>
+      <li>My fasting glucose is 95. Would it make sense to add a fasting insulin or HbA1c to my next blood draw for a fuller picture?</li>
+      <li>I keep noticing energy crashes after certain lunches. What would you want me to track or watch to help figure that out?</li>
+      <li>Given my symptoms, would a full thyroid panel — TSH, Free T3, Free T4, TPO antibodies — make sense for me?</li>
+    </ol>
+
+    <div class="watermark">Patient-prepared wellness summary — not a clinical document</div>
   </div>
-</div>
-<div class="header-divider"></div>
-<div class="patient-banner">
-  <div><span class="field-label">Patient Name</span><div class="field-value">Alex Rivera</div></div>
-  <div><span class="field-label">Age</span><div class="field-value">42</div></div>
-  <div><span class="field-label">Health Goals</span><div class="field-value">Metabolic health · Gut health · Reduce inflammation</div></div>
-  <div><span class="field-label">Appointment Date</span><div class="field-value">____________</div></div>
-</div>
-<div class="report-body">
-  <div class="section">
-    <div class="section-title">Biomarkers Tracked</div>
-    <div class="data-row"><div><div class="data-label">Vitamin D</div><div class="flag-note">Optimal: 40–60 ng/mL · Conventional normal: 20–100 ng/mL</div></div><div class="data-value optimal">44 ng/mL · Optimal</div></div>
-    <div class="data-row"><div><div class="data-label">Fasting Glucose</div><div class="flag-note">Optimal: 70–85 mg/dL · Conventional normal: 70–99 mg/dL</div></div><div class="data-value borderline">95 mg/dL · Monitor</div></div>
-    <div class="data-row"><div><div class="data-label">Ferritin</div><div class="flag-note">Optimal: 50–150 ng/mL · Conventional normal: 12–150 ng/mL</div></div><div class="data-value flagged">28 ng/mL · Below optimal</div></div>
+
+  <div class="footer">
+    <p class="fm">I created this summary using ThriveIQ (<span class="site">thriveiq.app</span>) to help me have a more informed conversation with my doctor.</p>
+    <p>All values in this guide are self-reported by me. I understand this is not a medical document. ThriveIQ is a personal wellness tracking application — it does not diagnose, treat, or provide medical advice. <span class="med">Never change or stop any medication based on this guide. Always consult your prescribing physician.</span></p>
   </div>
-  <div class="section">
-    <div class="section-title">Patterns ThriveIQ Detected</div>
-    <div class="pattern-card"><div class="pattern-title">Post-meal fatigue — 4 of last 7 days</div><div class="pattern-detail">Energy drops noted within 2 hours of lunch on days with higher refined carb intake. Food quality scores averaged 61 on affected days vs 79 on unaffected days.</div></div>
-    <div class="pattern-card"><div class="pattern-title">Bloating — Frequent (3+ days this week)</div><div class="pattern-detail">Bloating logged consistently. Dairy appeared in food log on 3 of 4 bloating days. Consider elimination trial.</div></div>
-  </div>
-  <div class="section">
-    <div class="section-title">Questions to Ask Your Doctor</div>
-    <div class="doctor-q">My ferritin is 28 ng/mL. Optimal levels are 50–150. Can we discuss whether supplementation makes sense?</div>
-    <div class="doctor-q">My fasting glucose is 95 — can we run a fasting insulin and HbA1c for a fuller picture?</div>
-    <div class="doctor-q">I've been experiencing post-meal fatigue consistently. Could this relate to blood sugar or food sensitivities?</div>
-    <div class="doctor-q">Can we run a full thyroid panel — TSH, free T3, free T4, and TPO antibodies?</div>
-  </div>
-  <div class="section">
-    <div class="section-title">Symptoms Logged This Period</div>
-    <div class="data-row"><div class="data-label">Fatigue</div><div class="data-value">5 days</div></div>
-    <div class="data-row"><div class="data-label">Bloating</div><div class="data-value">4 days</div></div>
-    <div class="data-row"><div class="data-label">Brain fog</div><div class="data-value">3 days</div></div>
-    <div class="data-row"><div class="data-label">Joint pain</div><div class="data-value">2 days</div></div>
-  </div>
-</div>
-<div class="report-footer">
-  <div class="disclaimer-text">This report was generated by ThriveIQ (thriveiq.app), a personal wellness tracking application. It is not a medical diagnosis or substitute for professional medical advice. Always discuss your health data with a qualified healthcare provider.</div>
-  <div class="footer-bottom">
-    <div><div class="footer-logo">Thrive<span>IQ</span></div><div class="footer-tagline">It's not in your head. It's on your plate.</div></div>
-    <div class="footer-tagline">Patient-generated wellness data · Not for clinical use</div>
-    <div class="footer-url">thriveiq.app</div>
-  </div>
+
 </div>
 </body>
 </html>
