@@ -71,6 +71,8 @@
   }
   .nav-logo span { color: var(--teal); }
   .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; background: none; border: none; cursor: pointer; padding: 8px; }
+  .hamburger span { display: block; height: 3px; width: 26px; background: var(--teal); border-radius: 2px; }
   .nav-links a {
     font-size: 14px; font-weight: 500; color: var(--mid);
     text-decoration: none; transition: color 0.2s;
@@ -439,7 +441,13 @@
     .blog-grid { grid-template-columns: 1fr; }
     .mission-values { grid-template-columns: 1fr; }
     .footer-top { grid-template-columns: 1fr 1fr; }
-    .nav-links { display: none; }
+    nav { position: relative; }
+    .hamburger { display: flex; }
+    .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #FFFFFF; flex-direction: column; align-items: flex-start; gap: 0; padding: 8px 0; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 999; }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 14px 24px; width: 100%; }
+    .nav-links .nav-cta { margin: 8px 24px; display: inline-block; width: auto; }
   }
 </style>
 </head>
@@ -519,7 +527,10 @@ function submitWaitlist(e) {
       <div style="font-family:'Playfair Display',Georgia,serif;font-size:11px;font-style:italic;color:#1D9E75;line-height:1.4;">It's on your plate.</div>
     </div>
   </a>
-  <ul class="nav-links">
+  <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" onclick="this.classList.remove('open')">
     <li><a href="#story">My Story</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#blog">Blog</a></li>
