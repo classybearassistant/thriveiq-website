@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThriveIQ — Support</title>
+<style>
+  :root{
+    --teal:#1D9E75;
+    --teal-light:#25C18F;
+    --dark:#0A0A0F;
+    --surface:#1A1A24;
+    --white:#FFFFFF;
+    --mid:rgba(255,255,255,0.62);
+    --line:rgba(29,158,117,0.30);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--dark);color:var(--white);font-family:-apple-system,'Segoe UI',sans-serif;line-height:1.65;}
+  a{color:var(--teal);text-decoration:none;}
+  a:hover{color:var(--teal-light);}
+
+  nav{position:relative;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;max-width:1080px;margin:0 auto;}
+  .nav-logo{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:24px;color:var(--white);}
+  .nav-logo span{color:var(--teal);}
+  .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+  .nav-links a{font-size:15px;color:var(--mid);}
+  .nav-links a:hover{color:var(--white);}
+  .nav-cta{background:var(--teal);color:var(--dark)!important;padding:10px 20px;border-radius:8px;font-weight:600;}
+  .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:8px;}
+  .hamburger span{display:block;height:3px;width:26px;background:var(--teal);border-radius:2px;}
+  @media (max-width:768px){
+    .hamburger{display:flex;}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--surface);flex-direction:column;align-items:flex-start;gap:0;padding:8px 0;box-shadow:0 8px 24px rgba(0,0,0,0.4);z-index:999;}
+    .nav-links.open{display:flex;}
+    .nav-links li{width:100%;}
+    .nav-links a{display:block;padding:14px 24px;width:100%;}
+    .nav-links .nav-cta{margin:8px 24px;display:inline-block;width:auto;}
+  }
+
+  .hero{text-align:center;padding:56px 24px 16px;}
+  .eyebrow{font-family:'Courier New',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--teal);}
+  h1{font-family:Georgia,serif;font-size:clamp(30px,5vw,42px);margin-top:14px;}
+  h1 em{color:var(--teal);}
+  .hero p{color:var(--mid);margin-top:14px;font-size:16px;}
+
+  .faq{max-width:760px;margin:36px auto 0;padding:0 24px;}
+  details{background:var(--surface);border-radius:12px;padding:18px 22px;margin-bottom:12px;}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--teal);font-size:20px;flex-shrink:0;}
+  details[open] summary::after{content:"–";}
+  details p{color:var(--mid);font-size:14.5px;margin-top:12px;}
+  details p + p{margin-top:10px;}
+
+  .contact{max-width:760px;margin:60px auto 0;padding:0 24px 80px;text-align:center;}
+  .contact-card{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:36px 30px;}
+  .contact-card h2{font-family:Georgia,serif;font-size:24px;}
+  .contact-card p{color:var(--mid);font-size:14.5px;margin-top:12px;}
+  .contact-card .email{display:inline-block;margin-top:18px;background:var(--teal);color:var(--dark);font-weight:700;padding:14px 28px;border-radius:10px;}
+  .contact-card .email:hover{background:var(--teal-light);color:var(--dark);}
+  .contact-card .note{font-size:12.5px;margin-top:14px;}
+
+  footer{border-top:1px solid rgba(255,255,255,0.08);padding:30px 24px;text-align:center;font-size:13px;color:var(--mid);}
+  footer .links{margin-top:10px;}
+  footer .links a{color:var(--mid);margin:0 10px;}
+  footer .links a:hover{color:var(--teal);}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://thriveiq.app/index.html" class="nav-logo">Thrive<span>IQ</span></a>
+  <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" onclick="this.classList.remove('open')">
+    <li><a href="https://thriveiq.app/index.html#story">My Story</a></li>
+    <li><a href="https://thriveiq.app/index.html#features">Features</a></li>
+    <li><a href="https://thriveiq.app/index.html#blog">Blog</a></li>
+    <li><a href="https://thriveiq.app/pricing.html">Pricing</a></li>
+    <li><a href="https://thriveiq.app/index.html#download" class="nav-cta">Download App</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">Support</div>
+  <h1>How can we <em>help?</em></h1>
+  <p>Most answers are right here. Anything else — we're one email away.</p>
+</section>
+
+<section class="faq">
+
+  <details>
+    <summary>How do I cancel my subscription?</summary>
+    <p>Subscriptions are managed by Apple, so canceling takes about 30 seconds: open <strong>Settings</strong> on your iPhone → tap your name → <strong>Subscriptions</strong> → ThriveIQ → <strong>Cancel Subscription</strong>.</p>
+    <p>You'll keep Pro access until the end of your current billing period. Your data stays yours either way.</p>
+  </details>
+
+  <details>
+    <summary>How does the 7-day free trial work?</summary>
+    <p>Your trial gives you full Pro access for 7 days. If you don't cancel before the trial ends, your subscription begins automatically. You can cancel anytime during the trial in Settings → your name → Subscriptions, and you'll keep Pro until the trial's last day.</p>
+  </details>
+
+  <details>
+    <summary>I was charged and want a refund.</summary>
+    <p>All purchases and refunds are handled by Apple, not ThriveIQ. Request a refund at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> — sign in with your Apple ID, find the charge, and choose "Request a refund." Apple typically responds within 48 hours.</p>
+  </details>
+
+  <details>
+    <summary>Is my health data private?</summary>
+    <p>Yes. Your health data lives on your device. It's encrypted, it is never sold or shared, and there are no ads — ever. You can delete all of your data at any time from inside the app.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete my data or my account?</summary>
+    <p>In the app, go to <strong>My Health → Settings</strong> and choose delete. This permanently removes your data. If you have any trouble, email us and we'll make sure it's done.</p>
+  </details>
+
+  <details>
+    <summary>Where is my Health Conversation Guide?</summary>
+    <p>Tap <strong>Build My Conversation Guide</strong> from the Insights tab. It gathers your logged meals, symptoms, labs, and patterns into a one-page summary — written in your voice — that you can save as a PDF and bring to your next appointment. Free includes one guide per month; Pro is unlimited.</p>
+  </details>
+
+  <details>
+    <summary>Why is my meal scan limited?</summary>
+    <p>The free plan includes 3 photo scans per day (manual logging is always unlimited). Pro removes the limit entirely. Your scan count resets each day at midnight.</p>
+  </details>
+
+  <details>
+    <summary>The app crashed or something looks broken.</summary>
+    <p>Sorry about that — we want to fix it fast. Email us with three things: what you were doing, your iPhone model, and your iOS version. Screenshots help enormously. Crashes are usually patched within days.</p>
+  </details>
+
+  <details>
+    <summary>Can ThriveIQ tell me what's wrong with me?</summary>
+    <p>No — and that's by design. ThriveIQ observes patterns in the data you log: what you ate, how you felt, what your numbers were. It never diagnoses, prescribes, or replaces your doctor. What it does is help you walk into your next appointment with organized evidence instead of a vague feeling — so you and your doctor can have a better conversation.</p>
+  </details>
+
+  <details>
+    <summary>Can you help me interpret my lab results?</summary>
+    <p>We can't interpret labs or give medical advice — for your safety and ours, that conversation belongs with your doctor, who knows your full picture. ThriveIQ shows you both standard and functional reference ranges, tracks your values over time, and adds them to your Health Conversation Guide so the conversation with your doctor starts in the right place.</p>
+  </details>
+
+  <details>
+    <summary>When is Android coming?</summary>
+    <p>It's on the roadmap, along with Oura, Garmin, Whoop, and Fitbit support. Join the <a href="https://thriveiq.app/index.html">waitlist</a> and you'll be the first to know.</p>
+  </details>
+
+</section>
+
+<section class="contact">
+  <div class="contact-card">
+    <h2>Still need help?</h2>
+    <p>ThriveIQ is built by one founder who reads every email. You'll hear back within one business day — usually much faster.</p>
+    <a class="email" href="mailto:support@thriveiq.app">Email support@thriveiq.app</a>
+    <p class="note">For anything about your health or your lab results, please talk to your doctor — we can't provide medical advice by email.</p>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 ThriveIQ · thriveiq.app · Not medical advice</div>
+  <div class="links">
+    <a href="https://thriveiq.app/thriveiq-privacy-policy.html">Privacy</a>
+    <a href="https://thriveiq.app/thriveiq-terms-of-use.html">Terms</a>
+  </div>
+</footer>
+
+</body>
+</html>
