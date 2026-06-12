@@ -24,6 +24,10 @@
   .wordmark span{color:var(--teal);}
   .tagline{font-family:Georgia,serif;font-style:italic;font-size:13px;color:rgba(255,255,255,0.7);margin-top:4px;}
   .doc-meta{text-align:right;}
+  @media (max-width:640px){
+    .brand{flex-direction:column;}
+    .doc-meta{text-align:left;}
+  }
   .doc-label{font-family:'Courier New',monospace;font-size:12px;letter-spacing:3px;color:var(--teal);text-transform:uppercase;}
   .doc-meta p{font-size:12px;color:rgba(255,255,255,0.75);margin-top:6px;}
   .doc-meta a{color:var(--teal);text-decoration:none;font-family:'Courier New',monospace;font-size:12px;}
