@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your CGM Is Giving You Incredible Data. Here's How to Read the Full Picture. | ThriveIQ</title>
+<meta name="description" content="CGMs are powerful tools. Here's how to use your glucose data to have a better conversation with your doctor — and the one test that completes the picture.">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal: #1D9E75;
+    --dark: #0A0A0F;
+    --mid: rgba(255,255,255,0.6);
+    --light: rgba(255,255,255,0.4);
+    --font-serif: Georgia, 'Times New Roman', serif;
+    --font-mono: 'Courier New', monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  body {
+    background: var(--dark);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* Nav */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid rgba(29,158,117,0.2);
+    position: sticky;
+    top: 0;
+    background: var(--dark);
+    z-index: 100;
+  }
+
+  .nav-logo {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--teal); }
+
+  .nav-back {
+    font-size: 13px;
+    color: var(--teal);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-back:hover { opacity: 0.8; }
+
+  /* Article */
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+  }
+
+  .post-cat {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    color: #ffffff;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--light);
+    margin-bottom: 0.75rem;
+  }
+
+  .disclaimer-top {
+    font-size: 12px;
+    color: var(--light);
+    font-style: italic;
+    padding: 0.75rem 1rem;
+    border-left: 2px solid rgba(29,158,117,0.4);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .post-divider {
+    border: none;
+    border-top: 1px solid rgba(29,158,117,0.2);
+    margin: 2.5rem 0;
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 2.5rem 0 1rem;
+    line-height: 1.3;
+  }
+
+  p {
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 1.25rem;
+    font-size: 16px;
+  }
+
+  em { color: #ffffff; font-style: italic; }
+
+  ul {
+    margin: 0 0 1.25rem 1.5rem;
+    color: rgba(255,255,255,0.85);
+  }
+
+  ul li { margin-bottom: 0.5rem; }
+
+  strong { color: #ffffff; font-weight: 600; }
+
+  .callout {
+    background: rgba(29,158,117,0.08);
+    border-left: 3px solid var(--teal);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+  }
+
+  .callout p { margin-bottom: 0; color: rgba(255,255,255,0.9); }
+
+  .questions-block {
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .questions-block h3 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+
+  .questions-block p {
+    font-size: 14px;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(29,158,117,0.3);
+  }
+
+  .questions-block p:last-child { margin-bottom: 0; }
+
+  .post-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(29,158,117,0.2);
+    font-size: 12px;
+    color: var(--light);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .signoff {
+    margin-top: 1rem;
+    font-style: normal;
+    color: var(--teal);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  /* CTA */
+  .post-cta {
+    background: rgba(29,158,117,0.1);
+    border: 1px solid rgba(29,158,117,0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .post-cta p {
+    font-size: 15px;
+    margin-bottom: 1.25rem;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .post-cta a {
+    display: inline-block;
+    background: var(--teal);
+    color: #0A0A0F;
+    padding: 12px 28px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: var(--font-sans);
+  }
+
+  .post-cta a:hover { opacity: 0.9; }
+
+  @media (max-width: 640px) {
+    article { padding: 2rem 1.25rem 4rem; }
+    nav { padding: 1rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Thrive<span>IQ</span></a>
+  <a href="index.html#blog" class="nav-back">← Back to Blog</a>
+</nav>
+
+<article>
+
+  <div class="post-cat">Metabolic Health</div>
+
+  <h1>Your CGM Is Giving You Incredible Data. Here's How to Read the Full Picture.</h1>
+
+  <div class="post-meta">
+    <span>Jakki</span>
+    <span>·</span>
+    <span>3 min read</span>
+    <span>·</span>
+    <span>June 14, 2026</span>
+  </div>
+
+  <div class="disclaimer-top">
+    Educational content only. Not medical advice. Talk to your doctor about what's right for you.
+  </div>
+
+  <hr class="post-divider">
+
+  <p>Continuous glucose monitors are one of the most powerful health tools available right now. Wearing one gives you real-time feedback on how your body responds to food, stress, sleep, and movement — data that used to require a clinical setting to collect.</p>
+
+  <p>But like any tool, a CGM tells you one part of the story. Knowing how to use that data — and what questions it should prompt you to ask your doctor — makes the difference between information and insight.</p>
+
+  <p>Here's what your CGM data is telling you, and what to ask next.</p>
+
+  <hr class="post-divider">
+
+  <h2>What your CGM measures beautifully</h2>
+
+  <p>A CGM tracks glucose continuously, giving you a real-time picture of your blood sugar response throughout the day. It can show you:</p>
+
+  <ul>
+    <li>How different foods affect your glucose curve</li>
+    <li>Whether your blood sugar spikes and crashes after meals</li>
+    <li>How stress and sleep shift your baseline</li>
+    <li>Whether your fasting glucose is trending up over time</li>
+    <li>Patterns you'd never catch with a once-a-year lab draw</li>
+  </ul>
+
+  <p>This is genuinely remarkable. A year of CGM data is more metabolic insight than most people get in a decade of annual physicals.</p>
+
+  <h2>The question your CGM data is pointing toward</h2>
+
+  <p>Here's where it gets interesting — and where your doctor conversation gets more valuable.</p>
+
+  <p>When your CGM shows stable blood sugar after a higher-carb meal, that's good information. But it naturally leads to a deeper question: <em>what is your insulin doing to keep it stable?</em></p>
+
+  <div class="callout">
+    <p>Think of it like a sump pump in your basement. The floor is dry — that's your CGM reading. Everything looks fine. But the pump might be running constantly to keep it that way. The dry floor is good news. Knowing how hard the pump is working gives you the full picture.</p>
+  </div>
+
+  <p>Blood sugar and insulin work as a team. When cells start becoming less responsive to insulin's signal over time, the pancreas compensates by producing more insulin to get the same job done. The result: blood sugar stays stable, CGM looks great — but insulin is working harder than it should be.</p>
+
+  <p>This stage is called compensatory hyperinsulinemia, and it can exist for years before blood sugar levels show any change. Research has found that elevated fasting insulin strongly predicts the development of metabolic dysfunction years before glucose or A1C become abnormal — meaning fasting insulin is often the earlier signal.</p>
+
+  <p>Your CGM can show you the glucose side of that equation beautifully. Fasting insulin shows you the other side.</p>
+
+  <h2>The test most people have never had</h2>
+
+  <p>Fasting insulin is not included in standard metabolic panels. It has to be specifically ordered — and most patients don't know to ask for it.</p>
+
+  <p>The standard lab reference range for fasting insulin is wide, partly because it's derived from a population that includes people with early-stage metabolic changes. Functional medicine practitioners typically look for a narrower optimal range, and research increasingly supports that approach for early detection.</p>
+
+  <p>In one study of young adults with completely normal blood glucose and normal A1C, nearly 30% had elevated insulin levels. Normal glucose. Normal A1C. But the insulin signal was already elevated — a pattern the CGM data alone wouldn't reveal.</p>
+
+  <p>That's not a flaw in the CGM. It's a prompt to go deeper.</p>
+
+  <h2>How to use your CGM data to have a better doctor conversation</h2>
+
+  <p>Your glucose patterns are a starting point, not a finish line. Here's how to turn your CGM data into a more productive appointment:</p>
+
+  <div class="questions-block">
+    <h3>If your blood sugar is consistently stable</h3>
+    <p>Ask your doctor to add fasting insulin to your next blood draw</p>
+    <p>Ask about HOMA-IR — a simple ratio calculated from fasting glucose and fasting insulin that estimates insulin sensitivity</p>
+    <p>Ask whether your fasting insulin is in the functional optimal range, not just the standard lab range</p>
+  </div>
+
+  <div class="questions-block">
+    <h3>If you're seeing spikes after certain meals</h3>
+    <p>Bring the pattern to your appointment — specific foods, times, and glucose curves</p>
+    <p>Ask whether the pattern warrants checking fasting insulin alongside A1C</p>
+    <p>Ask about the connection between post-meal spikes and longer-term metabolic trends</p>
+  </div>
+
+  <div class="questions-block">
+    <h3>If you're just starting with a CGM</h3>
+    <p>Log your symptoms alongside your glucose data — fatigue, brain fog, and cravings after meals are all meaningful context</p>
+    <p>Note your sleep and stress on high or low glucose days — the patterns are often connected</p>
+    <p>Bring 2–4 weeks of data to your doctor rather than isolated readings</p>
+  </div>
+
+  <h2>The bigger picture</h2>
+
+  <p>A CGM gives you a window into your metabolic health that simply didn't exist for most people a few years ago. Stable glucose lines are genuinely good news — they tell you your body is managing blood sugar effectively right now.</p>
+
+  <p>Adding fasting insulin to that picture tells you <em>how hard</em> your body is working to maintain that stability. Together, they give your doctor a much more complete view of your metabolic health — and give you a much more informed conversation.</p>
+
+  <p>The goal isn't to second-guess your CGM data. It's to let it ask better questions.</p>
+
+  <div class="post-cta">
+    <p>ThriveIQ tracks your symptoms, labs, and food together — so you can bring the full picture to your next appointment.</p>
+    <a href="index.html#waitlist">Join the Waitlist</a>
+  </div>
+
+  <div class="post-footer">
+    This post is for educational purposes only and is not medical advice. Always discuss your lab results, CGM data, and any health decisions with your healthcare provider.
+    <div class="signoff">Let's thrive, Jakki Cope.</div>
+  </div>
+
+</article>
+
+</body>
+</html>
