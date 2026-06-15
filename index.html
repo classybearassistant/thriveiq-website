@@ -449,6 +449,143 @@
     .nav-links a { display: block; padding: 14px 24px; width: 100%; }
     .nav-links .nav-cta { margin: 8px 24px; display: inline-block; width: auto; }
   }
+
+  /* ── MOBILE: 768px and below ── */
+  @media (max-width: 768px) {
+
+    /* Body: nav is now in-flow at this breakpoint, remove top padding */
+    body { padding-top: 44px; }
+
+    /* Waitlist banner: stack vertically, let it grow */
+    #waitlist-banner {
+      height: auto !important;
+      min-height: 44px;
+      flex-direction: column !important;
+      gap: 8px !important;
+      padding: 10px 16px !important;
+      text-align: center;
+    }
+    #waitlist-banner > div { justify-content: center; flex-wrap: wrap; }
+    #waitlist-banner form { flex-wrap: wrap; justify-content: center; }
+    #waitlist-banner form input { width: 180px !important; }
+    #waitlist-banner button[onclick] { right: 8px !important; top: 8px !important; transform: none !important; }
+
+    /* Nav: tighten padding and shrink logo SVG so it fits */
+    nav { padding: 0 4%; top: 0; }
+    nav > a svg { width: 36px !important; height: 44px !important; }
+    nav > a > div[style*="width:1px"] { height: 36px !important; }
+    nav > a > div:last-child > div:first-child { font-size: 20px !important; }
+    nav > a > div:last-child > div:nth-child(2),
+    nav > a > div:last-child > div:nth-child(3) { font-size: 10px !important; }
+
+    /* Hero: reduce padding, single column already handled at 900px */
+    .hero { padding: 60px 5% 60px; min-height: auto; }
+    .hero h1 { font-size: clamp(30px, 7vw, 42px); }
+    .hero-sub { font-size: 15px; }
+    .hero-stats { gap: 20px; flex-wrap: wrap; }
+    .hero-stat-num { font-size: 22px; }
+    .hero-actions { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+
+    /* Story: force single column — the inline grid uses minmax(300px,1fr) which overflows */
+    .story-cols {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    /* The sticky timeline card: un-sticky on mobile */
+    .story-cols > div:last-child { position: static !important; top: auto !important; }
+
+    /* Features grid: single column on mobile */
+    .features-grid { grid-template-columns: 1fr; }
+
+    /* Health Journal / Doctor Report section: single column, shorter iframe */
+    .health-journal-grid,
+    section[style*="grid-template-columns:1fr 1fr"] > div,
+    section[style*="grid-template-columns: 1fr 1fr"] > div { }
+
+    /* Blog header: stack on mobile */
+    .blog-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+    /* Footer: single column, tighten gap */
+    .footer-top { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+    /* Newsletter bar: stack form */
+    .newsletter-bar { flex-direction: column; gap: 12px; text-align: center; }
+    .newsletter-form { flex-wrap: wrap; justify-content: center; }
+    .newsletter-input { width: 100% !important; max-width: 280px; }
+
+    /* Section spacing */
+    .features, .blog, .story, .mission, .download { padding: 60px 5%; }
+
+    /* Mission values already 1 col at 900px */
+
+    /* Download buttons: full width on mobile */
+    .download-btns { flex-direction: column; align-items: center; }
+    .app-store-btn { width: 100%; max-width: 260px; justify-content: center; }
+  }
+
+  /* ── MOBILE: 480px and below ── */
+  @media (max-width: 480px) {
+
+    /* Waitlist: even more compact */
+    #waitlist-banner form input { width: 150px !important; }
+
+    /* Nav logo: smallest size */
+    nav > a > div:last-child > div:first-child { font-size: 18px !important; }
+    nav > a > div:last-child > div:nth-child(2),
+    nav > a > div:last-child > div:nth-child(3) { display: none !important; }
+
+    /* Hero: tight */
+    .hero { padding: 40px 4% 48px; }
+    .hero h1 { font-size: clamp(26px, 8vw, 38px); }
+    .hero-sub { font-size: 14px; }
+    .hero-eyebrow { font-size: 11px; padding: 5px 12px; }
+    .hero-stats { gap: 16px; }
+    .hero-stat-num { font-size: 20px; }
+
+    /* Feature cards: reduce padding */
+    .feature-card { padding: 24px 20px; }
+
+    /* Blog card body padding */
+    .blog-card-body { padding: 16px 16px 20px; }
+    .blog-card h3 { font-size: 16px; }
+
+    /* Section titles */
+    .section-title { font-size: clamp(22px, 6vw, 32px); }
+
+    /* Mission values: reduce padding */
+    .mission-value { padding: 20px 16px; }
+
+    /* Footer brand: smaller */
+    .footer-brand p { font-size: 12px; }
+    .footer-col h4 { font-size: 12px; }
+    .footer-col ul a { font-size: 12px; }
+    .footer-disclaimer { font-size: 10px; }
+  }
+
+  /* ── TARGETED inline-style overrides for sections using style="" grids ── */
+  /* "The Problem" section grid — already uses auto-fit minmax(240px) so fine */
+  /* "Health Journal" section — 2-col grid with 64px gap */
+  @media (max-width: 768px) {
+    /* Doctor report / health journal 2-col section */
+    section[style*="background:#111118"] > div > div:last-child {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 32px !important;
+    }
+    /* The iframe container: reduce height on mobile */
+    section[style*="background:#111118"] iframe {
+      height: 340px !important;
+    }
+    /* Patient stories grid — already auto-fill minmax(240px) — fine at 375px */
+    /* Patient stories header: stack on mobile */
+    #patient-stories > div > div:first-child {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+  }
 </style>
 </head>
 <body>
