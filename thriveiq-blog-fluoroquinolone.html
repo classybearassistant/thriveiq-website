@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluoroquinolone Toxicity: What I Wish I'd Known | ThriveIQ</title>
+  <meta name="description" content="In 2013 I took a course of Levaquin. What happened next took two years of my life — and became the reason ThriveIQ exists." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #1D9E75;
+      --teal-glow: rgba(29, 158, 117, 0.22);
+      --teal-divider: rgba(29, 158, 117, 0.30);
+      --bg: #0A0A0F;
+      --surface: #13131A;
+      --white: #FFFFFF;
+      --muted: rgba(255,255,255,0.55);
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-mono: 'Courier New', monospace;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--teal-divider);
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .nav-logo span { color: var(--teal); }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    /* HERO */
+    .hero {
+      max-width: 720px;
+      margin: 64px auto 0;
+      padding: 0 24px;
+    }
+
+    .blog-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--teal-divider);
+    }
+
+    /* ARTICLE */
+    article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    article p {
+      margin-bottom: 24px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    article h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 700;
+      color: var(--white);
+      margin: 56px 0 20px;
+      padding-top: 8px;
+    }
+
+    article h2::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: var(--teal);
+      margin-bottom: 14px;
+    }
+
+    article ul {
+      margin: 0 0 24px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    article ul li {
+      padding: 10px 0 10px 28px;
+      position: relative;
+      color: rgba(255,255,255,0.88);
+      border-bottom: 1px solid var(--teal-divider);
+    }
+
+    article ul li:first-child {
+      border-top: 1px solid var(--teal-divider);
+    }
+
+    article ul li::before {
+      content: '🌿';
+      position: absolute;
+      left: 0;
+      font-size: 13px;
+    }
+
+    blockquote {
+      margin: 32px 0;
+      padding: 24px 28px;
+      background: var(--teal-glow);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--white);
+    }
+
+    em {
+      font-style: italic;
+      color: var(--white);
+    }
+
+    .disclaimer-inline {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: -8px;
+    }
+
+    /* CTA BLOCK */
+    .cta-block {
+      margin: 48px 0;
+      padding: 32px;
+      background: var(--teal-glow);
+      border: 1px solid var(--teal-divider);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .cta-block p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      transition: opacity 0.2s;
+    }
+
+    .cta-btn:hover { opacity: 0.88; }
+
+    /* FOOTER DISCLAIMER */
+    .footer-disclaimer {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--teal-divider);
+      color: var(--muted);
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .signoff {
+      margin-top: 16px;
+      color: var(--teal);
+      font-style: italic;
+      font-family: var(--font-serif);
+    }
+
+    /* SITE FOOTER */
+    footer {
+      border-top: 1px solid var(--teal-divider);
+      padding: 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a { color: var(--teal); text-decoration: none; }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero, article { padding-left: 20px; padding-right: 20px; }
+      .hero { margin-top: 40px; }
+      blockquote { padding: 18px 20px; font-size: 16px; }
+      .cta-block { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Thrive<span>IQ</span></a>
+  <ul class="nav-links">
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="/#blog">Blog</a></li>
+    <li><a href="/support.html">Support</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <p class="blog-label">Founder Story &nbsp;·&nbsp; 12 min read</p>
+  <h1>Fluoroquinolone Toxicity: What I Wish I'd Known</h1>
+  <p class="meta">Educational content only. Not medical advice. Talk to your doctor about what's right for you.</p>
+</div>
+
+<article>
+
+  <p>In 2013 I took a course of Levaquin.</p>
+
+  <p>I didn't think twice about it. My doctor prescribed it as a preventative before a procedure, I filled it, I took it. That's what you do.</p>
+
+  <p>What happened next took two years of my life, sent me to more specialists than I can count, and ultimately became the reason ThriveIQ exists.</p>
+
+  <h2>It started in my joints</h2>
+
+  <p>The first thing I noticed was stiffness. My elbows, my back, my knees — all at once, all wrong. Not the kind of stiffness you feel after a long day or a bad night of sleep. This felt like someone had taken a baseball bat to every joint in my body simultaneously.</p>
+
+  <p>Within days it moved to nerve pain. The radiating, relentless kind that doesn't give you a break. Especially at night. I'd lie there unable to find a position that didn't hurt, wondering what was happening to me.</p>
+
+  <p>Then the brain fog came.</p>
+
+  <p>I even backed my car into my mother's car in my own driveway. She was there helping me with the kids because I wasn't okay. I simply didn't register that her car was behind mine. That's the kind of fog I'm talking about — not forgetfulness, not distraction. A disconnect from your own surroundings.</p>
+
+  <p>There were days it was hard to walk. Not because of muscle weakness — because of the pain of my bones moving.</p>
+
+  <h2>Every test came back normal</h2>
+
+  <p>My first instinct was to call my regular doctor. She ran blood work. Everything came back normal.</p>
+
+  <p>I wasn't relieved. I was confused. Something was clearly, undeniably wrong with my body — and the labs said nothing was happening.</p>
+
+  <p>Doctors didn't have an answer so they sent me to specialists. An orthopedic specialist for the joint and bone pain. Then a neurologist. They were looking for MS, lupus, rheumatoid arthritis. I had nerve conduction tests. CT scans. MRIs — head to toe, with and without contrast.</p>
+
+  <p>Everything came back normal.</p>
+
+  <p>Meanwhile I could barely get through a day.</p>
+
+  <h2>A nurse asked one question that changed everything</h2>
+
+  <p>I was at yet another appointment — I had lost count of how many by then — when a nurse walked in before the doctor. She looked at me and asked a question none of the specialists had thought to ask:</p>
+
+  <blockquote>"Have you taken anything different recently?"</blockquote>
+
+  <p>I told her: Levaquin.</p>
+
+  <p>She paused. She said she had a friend who'd had a reaction to Levaquin. She connected the dot.</p>
+
+  <p>That was it. That was the moment. Not a specialist. Not an MRI. A nurse who had heard a similar story from someone she knew personally.</p>
+
+  <h2>Then I went back to every doctor</h2>
+
+  <p>Armed with a name for what might be happening, I went back to every physician I had seen. I told them I believed it was the Levaquin.</p>
+
+  <p>I was met with skepticism — and not just from one doctor.</p>
+
+  <p>So I started researching everything I could find on my own. And what I discovered made me furious.</p>
+
+  <p>Levaquin is a fluoroquinolone antibiotic. This class of drugs carries a <strong>black box warning</strong> — the FDA's most serious warning label, reserved for drugs with known risks of severe or life-threatening adverse effects. The FDA has strengthened this warning multiple times, adding tendon rupture, peripheral neuropathy, and central nervous system effects to the label over the years.</p>
+
+  <p>I had never heard the term black box warning or been told Levaquin had such a warning. I had never been told about the risk of what's now commonly called "fluoroquinolone toxicity" or "floxing." I had just been handed a prescription.</p>
+
+  <h2>What fluoroquinolone toxicity actually is</h2>
+
+  <p>Fluoroquinolone toxicity — sometimes called being "floxed" — is a syndrome that can develop after taking fluoroquinolone antibiotics like Levaquin (levofloxacin), Cipro (ciprofloxacin), or Avelox (moxifloxacin).</p>
+
+  <p>The FDA has issued multiple safety warnings about this class of drugs, including warnings about:</p>
+
+  <ul>
+    <li>Tendinitis and tendon rupture</li>
+    <li>Peripheral neuropathy (nerve damage)</li>
+    <li>Central nervous system effects including brain fog and cognitive changes</li>
+    <li>Musculoskeletal effects including joint and muscle pain</li>
+    <li>Potential for these effects to be permanent in some cases (per FDA warnings)</li>
+  </ul>
+
+  <p>The reaction doesn't always happen immediately. It can begin during a course of antibiotics or weeks after finishing. It can affect multiple body systems simultaneously — which is part of why it's so hard to diagnose. Symptoms look like many different conditions. Doctors run tests for those conditions, everything comes back normal, and the patient is left without answers.</p>
+
+  <p>Sound familiar?</p>
+
+  <h2>What helped me rebuild</h2>
+
+  <p>I started figuring it out myself.</p>
+
+  <p>Nobody handed me a protocol. I started paying close attention to what I ate and how I felt afterward. I started removing chemicals — from my food, from my home, from my personal care products. I noticed patterns I never would have caught otherwise — connections between what I was eating and how my joints felt the next day, between certain ingredients and the nerve pain, between cleaning up my environment and my energy coming back.</p>
+
+  <p>Slowly, things started to shift.</p>
+
+  <p>That attention to patterns is what eventually became ThriveIQ.</p>
+
+  <p class="disclaimer-inline">This is my experience — not a prescription for anyone else. Always work with your healthcare provider on your own situation.</p>
+
+  <h2>Why I'm telling you this</h2>
+
+  <p>I'm sharing this story because I know there are people reading it who recognize themselves in it.</p>
+
+  <p>You've had the normal labs. You've been told it's stress. You've seen specialists who couldn't find anything. You know something is wrong and you can't prove it.</p>
+
+  <p>I'm not saying your answer is fluoroquinolone toxicity. I don't know your story.</p>
+
+  <p>But I know that the dismissed-patient experience is real, it is widespread, and it is not your fault. Your labs being normal does not mean nothing is wrong. It may mean the right tests haven't been ordered yet. It may mean the connection hasn't been made yet.</p>
+
+  <p>ThriveIQ exists to help you ask better questions. To track your patterns so you can walk into a doctor's office with data, not just symptoms. To connect the dots your labs aren't connecting.</p>
+
+  <p>Your body is telling you something. It deserves to be heard.</p>
+
+  <div class="cta-block">
+    <p>If you're ready to start tracking your patterns, ThriveIQ was built for exactly this.</p>
+    <a href="https://thriveiq.app" class="cta-btn">Start tracking at thriveiq.app</a>
+  </div>
+
+  <h2>If you think you may have had a fluoroquinolone reaction</h2>
+
+  <p>Talk to your doctor. Bring a timeline — when you took the antibiotic, when symptoms started, what you've experienced since. The FDA has a MedWatch reporting system for adverse drug reactions. There are patient communities and research resources specifically for fluoroquinolone toxicity worth exploring alongside your doctor.</p>
+
+  <p>You are not imagining it. You are not being dramatic. And you are not alone.</p>
+
+  <div class="footer-disclaimer">
+    <p>This post is for educational purposes only and is not medical advice. Always discuss your symptoms, medications, and health history with your healthcare provider. If you believe you have experienced an adverse reaction to a medication, report it to the FDA MedWatch program and consult your physician.</p>
+    <p class="signoff">Let's thrive, Jakki Cope.</p>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 ThriveIQ · <a href="/thriveiq-privacy-policy.html">Privacy Policy</a> · <a href="/thriveiq-terms-of-use.html">Terms of Use</a> · <a href="/support.html">Support</a></p>
+</footer>
+
+</body>
+</html>
