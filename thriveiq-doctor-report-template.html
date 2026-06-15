@@ -386,6 +386,79 @@
     body { background: white; }
     .page { box-shadow: none; }
   }
+
+  /* Sleep and bowel dot visualizations */
+  .dot-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+  }
+  .sleep-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #1D9E75;
+    background-color: transparent;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sleep-dot.logged {
+    background-color: #1D9E75;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .sleep-dot.empty {
+    border-color: #444;
+    background-color: transparent;
+  }
+  .bowel-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 8px 0;
+    max-width: 220px;
+  }
+  .bowel-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    background-color: transparent;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .bowel-dot.movement {
+    background-color: #1D9E75;
+    border-color: #1D9E75;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .bowel-dot.none {
+    background-color: #cc4444;
+    border-color: #cc4444;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .dot-legend {
+    display: flex;
+    gap: 12px;
+    font-size: 10px;
+    color: #999;
+    margin-top: 4px;
+  }
+  .dot-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 </style>
 <!-- cache bust June 15 2026 -->
 <!-- updated June 15 2026 -->
@@ -453,16 +526,61 @@
 
         <div class="stat-card">
           <div class="stat-card-title">Sleep</div>
+          <div class="dot-row">
+            <div class="sleep-dot empty" title="Mon"></div>
+            <div class="sleep-dot empty" title="Tue"></div>
+            <div class="sleep-dot logged" title="Wed"></div>
+            <div class="sleep-dot logged" title="Thu"></div>
+            <div class="sleep-dot logged" title="Fri"></div>
+            <div class="sleep-dot logged" title="Sat"></div>
+            <div class="sleep-dot logged" title="Sun"></div>
+          </div>
           <div class="stat-number">5h 30m</div>
-          <div class="stat-sublabel">average · 30 days</div>
+          <div class="stat-sublabel">average · last 7 nights</div>
           <div class="stat-note">Most nights: Restful quality. I sleep better when I'm in bed before 10pm — I noticed this on my great days.</div>
         </div>
 
         <div class="stat-card">
           <div class="stat-card-title">Digestion</div>
-          <div class="stat-number">22 <span style="font-size:15px; font-weight:400; color:#999;">of 30 days</span></div>
-          <div class="stat-sublabel">logged</div>
-          <div class="stat-note">Most common: Firm &amp; formed. Constipation on 4 days (Jun 3, 7, 11, 14) — clustered, not random. Longest gap between movements: 2 days. These days coincided with lower water intake.</div>
+          <div class="bowel-grid">
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot none"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot none"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot none"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot none"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot movement"></div>
+            <div class="bowel-dot"></div>
+            <div class="bowel-dot"></div>
+          </div>
+          <div class="dot-legend">
+            <div class="dot-legend-item"><div class="legend-dot" style="background:#1D9E75"></div> Movement</div>
+            <div class="dot-legend-item"><div class="legend-dot" style="background:#cc4444"></div> No movement</div>
+            <div class="dot-legend-item"><div class="legend-dot" style="border:1.5px solid #555;background:transparent"></div> Not logged</div>
+          </div>
+          <div class="stat-sublabel">30-day bowel log</div>
+          <div class="stat-note">Most common: Normal &amp; easy. Constipation on 4 days (Jun 3, 7, 11, 14) — clustered, not random. These days coincided with lower water intake.</div>
         </div>
 
         <div class="stat-card">
