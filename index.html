@@ -586,6 +586,25 @@
       align-items: flex-start !important;
     }
   }
+
+@media (max-width: 768px) {
+  iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .doctor-report-preview, .report-preview, .journal-preview {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+  .two-col, .two-column, .feature-grid, .features-grid {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+  .hero img, .hero-image, .mockup {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
 </style>
 </head>
 <body>
