@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seed Oils: What They Are, Why They're in Everything, and What to Use Instead | ThriveIQ</title>
+  <meta name="description" content="I started paying attention to seed oils a few years ago and I genuinely couldn't believe how many things they were hiding in." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --teal: #1D9E75; --teal-glow: rgba(29,158,117,0.22); --teal-divider: rgba(29,158,117,0.30); --bg: #0A0A0F; --white: #FFFFFF; --muted: rgba(255,255,255,0.55); --font-serif: Georgia,serif; --font-mono: "Courier New",monospace; --font-body: -apple-system,sans-serif; }
+    body { background: var(--bg); color: var(--white); font-family: var(--font-body); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; border-bottom: 1px solid var(--teal-divider); }
+    .nav-logo { font-family: var(--font-serif); font-size: 22px; font-weight: 700; text-decoration: none; color: var(--white); }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .nav-links a:hover { color: var(--white); }
+    .hero { max-width: 720px; margin: 64px auto 0; padding: 0 24px; }
+    .blog-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    h1 { font-family: var(--font-serif); font-size: clamp(28px,5vw,44px); font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+    .meta { color: var(--muted); font-size: 14px; font-style: italic; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--teal-divider); }
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    article p { margin-bottom: 24px; color: rgba(255,255,255,0.88); }
+    article h2 { font-family: var(--font-serif); font-size: clamp(20px,3vw,26px); font-weight: 700; color: var(--white); margin: 56px 0 20px; }
+    article h2::before { content: ""; display: block; width: 32px; height: 2px; background: var(--teal); margin-bottom: 14px; }
+    article h3 { font-family: var(--font-serif); font-size: 19px; font-weight: 700; color: var(--teal); margin: 28px 0 10px; }
+    article ul { margin: 0 0 24px 0; padding-left: 0; list-style: none; }
+    article ul li { padding: 10px 0 10px 28px; position: relative; color: rgba(255,255,255,0.88); border-bottom: 1px solid var(--teal-divider); }
+    article ul li:first-child { border-top: 1px solid var(--teal-divider); }
+    article ul li::before { content: "🌿"; position: absolute; left: 0; font-size: 13px; }
+    .range-table { width: 100%; border-collapse: collapse; margin: 0 0 24px; }
+    .range-table td { padding: 12px 16px; border-bottom: 1px solid var(--teal-divider); color: rgba(255,255,255,0.88); font-size: 15px; }
+    .range-table td:first-child { font-family: var(--font-mono); color: var(--teal); white-space: nowrap; }
+    .range-table tr:first-child td { border-top: 1px solid var(--teal-divider); }
+    .highlight-box { margin: 32px 0; padding: 24px 28px; background: var(--teal-glow); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .highlight-box p { margin-bottom: 0; color: rgba(255,255,255,0.88); font-size: 16px; line-height: 1.7; font-style: italic; }
+    .variant-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .variant-block h3 { font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--teal); letter-spacing: 1px; margin: 0 0 8px; }
+    .variant-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px; }
+    .comparison-card { padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .comparison-card .card-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .comparison-card p { font-size: 14px; color: rgba(255,255,255,0.75); margin-bottom: 6px; line-height: 1.5; }
+    .comparison-card p:last-child { margin-bottom: 0; }
+    .comparison-card .verdict { font-size: 14px; color: var(--teal); font-style: italic; margin-top: 10px; }
+    .ratio-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .ratio-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .ratio-block p { margin-bottom: 6px; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .ratio-block p:last-child { margin-bottom: 0; }
+    .insight-box { margin: 32px 0; padding: 24px 28px; background: var(--teal-glow); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .insight-box .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .insight-box p { margin-bottom: 0; color: rgba(255,255,255,0.88); font-size: 15px; line-height: 1.6; }
+    .pattern-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .pattern-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .pattern-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .meal-block { margin: 0 0 8px; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .meal-block .meal-name { font-size: 15px; color: rgba(255,255,255,0.88); }
+    .meal-block .meal-protein { font-family: var(--font-mono); font-size: 13px; color: var(--teal); }
+    .nutrient-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .nutrient-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .nutrient-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .cta-block { margin: 48px 0; padding: 32px; background: var(--teal-glow); border: 1px solid var(--teal-divider); border-radius: 12px; text-align: center; }
+    .cta-block p { font-size: 18px; margin-bottom: 20px; color: var(--white); }
+    .cta-btn { display: inline-block; background: var(--teal); color: var(--white); text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 32px; border-radius: 50px; }
+    .footer-disclaimer { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--teal-divider); color: var(--muted); font-size: 14px; font-style: italic; line-height: 1.7; }
+    .signoff { margin-top: 16px; color: var(--teal); font-style: italic; font-family: var(--font-serif); }
+    footer { border-top: 1px solid var(--teal-divider); padding: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+    footer a { color: var(--teal); text-decoration: none; }
+    @media (max-width: 600px) { nav { padding: 16px 20px; } .nav-links { display: none; } .hero, article { padding-left: 20px; padding-right: 20px; } .hero { margin-top: 40px; } .comparison-grid { grid-template-columns: 1fr; } .cta-block { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+<nav><a href="/" class="nav-logo">Thrive<span>IQ</span></a><ul class="nav-links"><li><a href="/#features">Features</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/#blog">Blog</a></li><li><a href="/support.html">Support</a></li></ul></nav>
+<div class="hero">
+  <p class="blog-label">Food Quality &nbsp;·&nbsp; 6 min read</p>
+  <h1>Seed Oils: What They Are, Why They're in Everything, and What to Use Instead</h1>
+  <p class="meta">Educational content only. Not medical advice. Talk to your doctor about what's right for you.</p>
+</div>
+<article>
+  <p>I started paying attention to seed oils a few years ago and I genuinely couldn't believe how many things they were hiding in. Once you start reading ingredient labels, you can't stop.</p>
+  <p>Here's what I've learned — without the chemistry lecture.</p>
+  <h2>What they actually are</h2>
+  <p>Seed oils are oils pressed from the seeds of plants — not the fruit or flesh, just the seed. The ones you'll find in almost everything: canola oil, soybean oil, corn oil, sunflower oil, safflower oil, cottonseed oil, grapeseed oil, rice bran oil.</p>
+  <p>These are different from oils like olive oil (pressed from the olive fruit), coconut oil, or butter and ghee. Seed oils require serious industrial processing — high heat, chemical solvents, deodorization — to become the clear, neutral oils you see on shelves.</p>
+  <p>Quick label tip: if an ingredient list says "vegetable oil," it's almost always soybean oil or a seed oil blend.</p>
+  <h2>Why they ended up in everything</h2>
+  <p>Starting in the mid-20th century, seed oils became the dominant cooking fat in the American food supply because they're cheap to produce, have a long shelf life, and were marketed as heart-healthy alternatives to saturated fat. That last claim has been significantly walked back in research over the past two decades. But the infrastructure is built around them.</p>
+  <h2>The omega-6 imbalance</h2>
+  <p>Seed oils are extremely high in omega-6 polyunsaturated fatty acids. Omega-6 isn't inherently bad — but it exists in a ratio with omega-3 that matters for inflammation. Historically, the ratio in the human diet was roughly 1:1 to 4:1. The modern American diet sits closer to 20:1.</p>
+  <p>When omega-6 intake is chronically elevated relative to omega-3, research associates it with increased systemic inflammation — the thread that runs through cardiovascular disease, metabolic dysfunction, joint pain, and a lot of the chronic symptoms that brought me to paying attention to food quality in the first place.</p>
+  <h2>The heat problem</h2>
+  <p>Polyunsaturated fats are chemically unstable at high heat. When seed oils are heated they oxidize. Oxidized fats produce compounds research has associated with cellular damage. Oils high in saturated fat (butter, coconut oil, ghee) and monounsaturated fat (olive oil, avocado oil) are significantly more heat stable.</p>
+  <h2>What I cook with instead</h2>
+  <ul>
+    <li>High heat — butter, ghee, avocado oil, coconut oil</li>
+    <li>Medium heat — extra virgin olive oil</li>
+    <li>Cold use (dressings, finishing) — extra virgin olive oil, avocado oil</li>
+    <li>Packaged foods — I look for olive oil, avocado oil, or butter. If it says "vegetable oil" I put it back.</li>
+  </ul>
+  <p>The goal isn't perfection. Seed oils are everywhere and complete avoidance isn't realistic. But reducing daily exposure — especially at home where you control the cooking fat — is one of the most straightforward food quality changes you can make.</p>
+  <h2>What I'd ask at my next appointment</h2>
+  <ul>
+    <li>Could my omega-6 to omega-3 ratio be contributing to my inflammation markers?</li>
+    <li>Is my hs-CRP elevated — and could dietary fat quality be a factor?</li>
+  </ul>
+  <div class="cta-block">
+    <p>If you're ready to start tracking your full picture, ThriveIQ was built for exactly this.</p>
+    <a href="https://thriveiq.app" class="cta-btn">Start tracking at thriveiq.app</a>
+  </div>
+  <div class="footer-disclaimer">
+    <p>This post is for educational purposes only and is not medical advice. Always discuss your dietary changes and health history with your healthcare provider.</p>
+    <p class="signoff">Let's thrive.</p>
+  </div>
+</article>
+<footer><p>© 2026 ThriveIQ · <a href="/thriveiq-privacy-policy.html">Privacy Policy</a> · <a href="/thriveiq-terms-of-use.html">Terms of Use</a> · <a href="/support.html">Support</a></p></footer>
+</body>
+</html>

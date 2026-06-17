@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Teeth Are Trying to Tell You Something About Your Metabolic Health | ThriveIQ</title>
+  <meta name="description" content="This connection genuinely surprised me when I came across it. Your mouth isn't separate from your metabolic health." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --teal: #1D9E75; --teal-glow: rgba(29,158,117,0.22); --teal-divider: rgba(29,158,117,0.30); --bg: #0A0A0F; --white: #FFFFFF; --muted: rgba(255,255,255,0.55); --font-serif: Georgia,serif; --font-mono: "Courier New",monospace; --font-body: -apple-system,sans-serif; }
+    body { background: var(--bg); color: var(--white); font-family: var(--font-body); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; border-bottom: 1px solid var(--teal-divider); }
+    .nav-logo { font-family: var(--font-serif); font-size: 22px; font-weight: 700; text-decoration: none; color: var(--white); }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .nav-links a:hover { color: var(--white); }
+    .hero { max-width: 720px; margin: 64px auto 0; padding: 0 24px; }
+    .blog-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    h1 { font-family: var(--font-serif); font-size: clamp(28px,5vw,44px); font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+    .meta { color: var(--muted); font-size: 14px; font-style: italic; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--teal-divider); }
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    article p { margin-bottom: 24px; color: rgba(255,255,255,0.88); }
+    article h2 { font-family: var(--font-serif); font-size: clamp(20px,3vw,26px); font-weight: 700; color: var(--white); margin: 56px 0 20px; }
+    article h2::before { content: ""; display: block; width: 32px; height: 2px; background: var(--teal); margin-bottom: 14px; }
+    article h3 { font-family: var(--font-serif); font-size: 19px; font-weight: 700; color: var(--teal); margin: 28px 0 10px; }
+    article ul { margin: 0 0 24px 0; padding-left: 0; list-style: none; }
+    article ul li { padding: 10px 0 10px 28px; position: relative; color: rgba(255,255,255,0.88); border-bottom: 1px solid var(--teal-divider); }
+    article ul li:first-child { border-top: 1px solid var(--teal-divider); }
+    article ul li::before { content: "🌿"; position: absolute; left: 0; font-size: 13px; }
+    .range-table { width: 100%; border-collapse: collapse; margin: 0 0 24px; }
+    .range-table td { padding: 12px 16px; border-bottom: 1px solid var(--teal-divider); color: rgba(255,255,255,0.88); font-size: 15px; }
+    .range-table td:first-child { font-family: var(--font-mono); color: var(--teal); white-space: nowrap; }
+    .range-table tr:first-child td { border-top: 1px solid var(--teal-divider); }
+    .highlight-box { margin: 32px 0; padding: 24px 28px; background: var(--teal-glow); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .highlight-box p { margin-bottom: 0; color: rgba(255,255,255,0.88); font-size: 16px; line-height: 1.7; font-style: italic; }
+    .variant-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .variant-block h3 { font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--teal); letter-spacing: 1px; margin: 0 0 8px; }
+    .variant-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px; }
+    .comparison-card { padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .comparison-card .card-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .comparison-card p { font-size: 14px; color: rgba(255,255,255,0.75); margin-bottom: 6px; line-height: 1.5; }
+    .comparison-card p:last-child { margin-bottom: 0; }
+    .comparison-card .verdict { font-size: 14px; color: var(--teal); font-style: italic; margin-top: 10px; }
+    .ratio-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .ratio-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .ratio-block p { margin-bottom: 6px; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .ratio-block p:last-child { margin-bottom: 0; }
+    .insight-box { margin: 32px 0; padding: 24px 28px; background: var(--teal-glow); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .insight-box .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .insight-box p { margin-bottom: 0; color: rgba(255,255,255,0.88); font-size: 15px; line-height: 1.6; }
+    .pattern-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .pattern-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .pattern-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .meal-block { margin: 0 0 8px; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .meal-block .meal-name { font-size: 15px; color: rgba(255,255,255,0.88); }
+    .meal-block .meal-protein { font-family: var(--font-mono); font-size: 13px; color: var(--teal); }
+    .nutrient-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .nutrient-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .nutrient-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .cta-block { margin: 48px 0; padding: 32px; background: var(--teal-glow); border: 1px solid var(--teal-divider); border-radius: 12px; text-align: center; }
+    .cta-block p { font-size: 18px; margin-bottom: 20px; color: var(--white); }
+    .cta-btn { display: inline-block; background: var(--teal); color: var(--white); text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 32px; border-radius: 50px; }
+    .footer-disclaimer { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--teal-divider); color: var(--muted); font-size: 14px; font-style: italic; line-height: 1.7; }
+    .signoff { margin-top: 16px; color: var(--teal); font-style: italic; font-family: var(--font-serif); }
+    footer { border-top: 1px solid var(--teal-divider); padding: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+    footer a { color: var(--teal); text-decoration: none; }
+    @media (max-width: 600px) { nav { padding: 16px 20px; } .nav-links { display: none; } .hero, article { padding-left: 20px; padding-right: 20px; } .hero { margin-top: 40px; } .comparison-grid { grid-template-columns: 1fr; } .cta-block { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+<nav><a href="/" class="nav-logo">Thrive<span>IQ</span></a><ul class="nav-links"><li><a href="/#features">Features</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/#blog">Blog</a></li><li><a href="/support.html">Support</a></li></ul></nav>
+<div class="hero">
+  <p class="blog-label">Metabolic Health &nbsp;·&nbsp; 5 min read</p>
+  <h1>Your Teeth Are Trying to Tell You Something About Your Metabolic Health</h1>
+  <p class="meta">Educational content only. Not medical advice. Talk to your doctor about what's right for you.</p>
+</div>
+<article>
+  <p>This connection genuinely surprised me when I came across it. Your mouth isn't separate from your metabolic health — it might actually be one of the earliest places imbalances show up.</p>
+  <p>If you brush, floss, see your dentist regularly, and still deal with recurring cavities, gum inflammation, or sensitivity — it might be worth looking beyond oral hygiene.</p>
+  <h2>Your mouth as a mirror</h2>
+  <p>The state of your teeth and gums can be one of the earliest visible signs of metabolic or nutritional imbalance — sometimes long before a blood test flags anything. Here's what tends to show up and what it might be connected to:</p>
+  <div class="pattern-block">
+    <h3>Gum inflammation</h3>
+    <p>Chronic gum disease is strongly associated with systemic inflammation. The same markers that show up in cardiovascular disease and metabolic dysfunction show up in gum tissue. In people with blood sugar dysregulation, gum tissue heals more slowly and is more susceptible to bacterial overgrowth. The connection runs both ways.</p>
+  </div>
+  <div class="pattern-block">
+    <h3>Enamel erosion</h3>
+    <p>Enamel doesn't grow back. When it erodes, the causes are almost always acidic — dietary acid from citrus and carbonated drinks, or acid reflux reaching the mouth. Acid reflux itself is frequently associated with low stomach acid and gut dysfunction.</p>
+  </div>
+  <div class="pattern-block">
+    <h3>Frequent cavities despite good hygiene</h3>
+    <p>Elevated blood sugar feeds the bacteria that cause tooth decay and reduces saliva production. Saliva is one of your mouth's primary defenses against cavities.</p>
+  </div>
+  <div class="pattern-block">
+    <h3>Dry mouth</h3>
+    <p>Associated with dehydration, certain medications, and blood sugar dysregulation. When saliva is reduced, the whole oral environment shifts.</p>
+  </div>
+  <h2>The nutrient connection</h2>
+  <div class="nutrient-block">
+    <h3>Vitamin D and K2</h3>
+    <p>Work together to direct calcium into bones and teeth. Low Vitamin D is associated with increased cavity risk and slower gum healing.</p>
+  </div>
+  <div class="nutrient-block">
+    <h3>Magnesium</h3>
+    <p>Essential for enamel formation and jaw bone density.</p>
+  </div>
+  <div class="nutrient-block">
+    <h3>Vitamin C</h3>
+    <p>Critical for gum tissue integrity. Bleeding gums can be an early sign of subclinical Vitamin C deficiency — more common than most people realize.</p>
+  </div>
+  <div class="nutrient-block">
+    <h3>B vitamins</h3>
+    <p>Particularly B12 and folate — support the mucosal tissue lining the mouth. Deficiencies can show up as mouth sores, burning sensation, or an inflamed tongue.</p>
+  </div>
+  <h2>What's worth noticing between dental visits</h2>
+  <ul>
+    <li>Bleeding gums when brushing — not normal, worth investigating</li>
+    <li>Increased sensitivity that's new</li>
+    <li>Recurring cavities in the same areas</li>
+    <li>Dry mouth that doesn't resolve with water</li>
+    <li>Mouth sores that take a long time to heal</li>
+    <li>A coated or inflamed tongue</li>
+  </ul>
+  <h2>What I'd ask at my next appointment</h2>
+  <ul>
+    <li>Could my recurring dental issues be connected to blood sugar or metabolic health?</li>
+    <li>Is it worth checking my Vitamin D, magnesium, or B12 given my dental history?</li>
+    <li>Could acid reflux be contributing to my enamel erosion?</li>
+  </ul>
+  <p>Your mouth isn't a separate system. It's part of the whole picture — and often one of the first places that picture starts to show.</p>
+  <div class="cta-block">
+    <p>If you're ready to start tracking your full picture, ThriveIQ was built for exactly this.</p>
+    <a href="https://thriveiq.app" class="cta-btn">Start tracking at thriveiq.app</a>
+  </div>
+  <div class="footer-disclaimer">
+    <p>This post is for educational purposes only and is not medical advice. Always discuss your symptoms and health history with your healthcare provider and dentist.</p>
+    <p class="signoff">Let's thrive.</p>
+  </div>
+</article>
+<footer><p>© 2026 ThriveIQ · <a href="/thriveiq-privacy-policy.html">Privacy Policy</a> · <a href="/thriveiq-terms-of-use.html">Terms of Use</a> · <a href="/support.html">Support</a></p></footer>
+</body>
+</html>

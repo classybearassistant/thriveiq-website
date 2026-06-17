@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 2PM Energy Crash Isn't Normal. Here's What's Actually Happening. | ThriveIQ</title>
+  <meta name="description" content="Every day around 2pm, it hits. You've probably been told this is normal. It's not. It's a signal." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #1D9E75;
+      --teal-glow: rgba(29, 158, 117, 0.22);
+      --teal-divider: rgba(29, 158, 117, 0.30);
+      --bg: #0A0A0F;
+      --white: #FFFFFF;
+      --muted: rgba(255,255,255,0.55);
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-mono: 'Courier New', monospace;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--teal-divider);
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .nav-logo span { color: var(--teal); }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .hero {
+      max-width: 720px;
+      margin: 64px auto 0;
+      padding: 0 24px;
+    }
+
+    .blog-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--teal-divider);
+    }
+
+    article {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    article p {
+      margin-bottom: 24px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    article h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 700;
+      color: var(--white);
+      margin: 56px 0 20px;
+    }
+
+    article h2::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: var(--teal);
+      margin-bottom: 14px;
+    }
+
+    article ul {
+      margin: 0 0 24px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    article ul li {
+      padding: 10px 0 10px 28px;
+      position: relative;
+      color: rgba(255,255,255,0.88);
+      border-bottom: 1px solid var(--teal-divider);
+    }
+
+    article ul li:first-child {
+      border-top: 1px solid var(--teal-divider);
+    }
+
+    article ul li::before {
+      content: '🌿';
+      position: absolute;
+      left: 0;
+      font-size: 13px;
+    }
+
+    .try-this {
+      margin: 32px 0;
+      padding: 24px 28px;
+      background: var(--teal-glow);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .try-this strong {
+      display: block;
+      color: var(--teal);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .try-this p {
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .try-this .disclaimer {
+      font-size: 14px;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 0;
+    }
+
+    .cta-block {
+      margin: 48px 0;
+      padding: 32px;
+      background: var(--teal-glow);
+      border: 1px solid var(--teal-divider);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .cta-block p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      transition: opacity 0.2s;
+    }
+
+    .cta-btn:hover { opacity: 0.88; }
+
+    .footer-disclaimer {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--teal-divider);
+      color: var(--muted);
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .signoff {
+      margin-top: 16px;
+      color: var(--teal);
+      font-style: italic;
+      font-family: var(--font-serif);
+    }
+
+    footer {
+      border-top: 1px solid var(--teal-divider);
+      padding: 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a { color: var(--teal); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero, article { padding-left: 20px; padding-right: 20px; }
+      .hero { margin-top: 40px; }
+      .try-this { padding: 18px 20px; }
+      .cta-block { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Thrive<span>IQ</span></a>
+  <ul class="nav-links">
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="/#blog">Blog</a></li>
+    <li><a href="/support.html">Support</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <p class="blog-label">Metabolic Health &nbsp;·&nbsp; 5 min read</p>
+  <h1>The 2PM Energy Crash Isn't Normal. Here's What's Actually Happening.</h1>
+  <p class="meta">Educational content only. Not medical advice. Talk to your doctor about what's right for you.</p>
+</div>
+
+<article>
+
+  <p>Every day around 2pm, it hits.</p>
+
+  <p>Your eyes get heavy. Your focus evaporates. You reach for coffee or something sweet just to get through the afternoon.</p>
+
+  <p>You've probably been told this is normal. It's not. It's a signal.</p>
+
+  <h2>What's actually happening</h2>
+
+  <p>The 2pm crash is almost always a blood sugar response — not tiredness, not a natural circadian dip, not a personality flaw.</p>
+
+  <p>Here's the sequence:</p>
+
+  <p>You eat lunch. If that lunch was high in refined carbohydrates — bread, pasta, rice, anything processed — your blood sugar spikes rapidly. Your pancreas responds by releasing insulin to bring it back down. In people with any degree of insulin dysregulation, that insulin response overshoots. Your blood sugar drops below where it started.</p>
+
+  <p>That drop is what you feel at 2pm. It's not afternoon sleepiness. It's your body running low on fuel because your insulin cleared too much glucose too fast.</p>
+
+  <h2>Why coffee makes it worse</h2>
+
+  <p>Reaching for caffeine at 2pm feels logical. It temporarily masks the crash — but it doesn't fix the underlying blood sugar drop.</p>
+
+  <p>Worse, afternoon caffeine raises cortisol, which raises blood sugar, which triggers another insulin response, which sets you up for another crash — and disrupts your sleep that night, which makes tomorrow's crash worse.</p>
+
+  <p>It's a cycle. And it starts at lunch.</p>
+
+  <h2>What your lunch is doing to your afternoon</h2>
+
+  <p>The meals most likely to cause a 2pm crash:</p>
+
+  <ul>
+    <li>Sandwiches on white or whole wheat bread</li>
+    <li>Pasta or rice-heavy dishes</li>
+    <li>Salads with sweetened dressings and croutons</li>
+    <li>Anything from a fast food or quick-service restaurant</li>
+    <li>"Healthy" wraps that are mostly refined flour</li>
+  </ul>
+
+  <p>The meals least likely to cause a crash:</p>
+
+  <ul>
+    <li>Protein-forward meals with healthy fats</li>
+    <li>Vegetables with a quality protein source</li>
+    <li>Meals built around whole, minimally processed ingredients</li>
+  </ul>
+
+  <h2>What to watch for</h2>
+
+  <p>If the 2pm crash happens daily regardless of what you eat, or if it's accompanied by shakiness, anxiety, or heart racing, that's worth a conversation with your doctor. Those symptoms alongside a consistent post-meal crash pattern are worth bringing to your next appointment — along with a request for fasting glucose and fasting insulin if you haven't had them checked recently.</p>
+
+  <h2>What to ask at your next appointment</h2>
+
+  <ul>
+    <li>Can we check my fasting insulin alongside my fasting glucose?</li>
+    <li>Could my afternoon energy crashes be related to blood sugar regulation?</li>
+    <li>Is there a pattern in my labs that could explain this?</li>
+  </ul>
+
+  <p>The 2pm crash is your body communicating something. It's worth listening to.</p>
+
+  <div class="try-this">
+    <strong>One thing to try today</strong>
+    <p>Add a quality protein source to your next lunch — eggs, chicken, fish, or legumes — and note how you feel at 3pm. Patterns become clear faster than you'd expect.</p>
+    <p class="disclaimer">Not medical advice — always discuss with your healthcare provider.</p>
+  </div>
+
+  <div class="cta-block">
+    <p>If you're ready to start connecting your food to how you feel, ThriveIQ was built for exactly this.</p>
+    <a href="https://thriveiq.app" class="cta-btn">Start tracking at thriveiq.app</a>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>This post is for educational purposes only and is not medical advice. Always discuss your symptoms and health history with your healthcare provider.</p>
+    <p class="signoff">Let's thrive.</p>
+  </div>
+
+</article>
+
+<footer>
+  <p>© 2026 ThriveIQ · <a href="/thriveiq-privacy-policy.html">Privacy Policy</a> · <a href="/thriveiq-terms-of-use.html">Terms of Use</a> · <a href="/support.html">Support</a></p>
+</footer>
+
+</body>
+</html>

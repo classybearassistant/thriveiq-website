@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTHFR: Why Your B12 and Folate Supplements Might Not Be Working | ThriveIQ</title>
+  <meta name="description" content="I fell down a rabbit hole on this one — and I'm glad I did, because it explained something that had confused me for a long time." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --teal: #1D9E75; --teal-glow: rgba(29,158,117,0.22); --teal-divider: rgba(29,158,117,0.30); --bg: #0A0A0F; --white: #FFFFFF; --muted: rgba(255,255,255,0.55); --font-serif: Georgia,serif; --font-mono: "Courier New",monospace; --font-body: -apple-system,sans-serif; }
+    body { background: var(--bg); color: var(--white); font-family: var(--font-body); font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; border-bottom: 1px solid var(--teal-divider); }
+    .nav-logo { font-family: var(--font-serif); font-size: 22px; font-weight: 700; text-decoration: none; color: var(--white); }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .nav-links a:hover { color: var(--white); }
+    .hero { max-width: 720px; margin: 64px auto 0; padding: 0 24px; }
+    .blog-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); margin-bottom: 20px; }
+    h1 { font-family: var(--font-serif); font-size: clamp(28px,5vw,44px); font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+    .meta { color: var(--muted); font-size: 14px; font-style: italic; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--teal-divider); }
+    article { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    article p { margin-bottom: 24px; color: rgba(255,255,255,0.88); }
+    article h2 { font-family: var(--font-serif); font-size: clamp(20px,3vw,26px); font-weight: 700; color: var(--white); margin: 56px 0 20px; }
+    article h2::before { content: ""; display: block; width: 32px; height: 2px; background: var(--teal); margin-bottom: 14px; }
+    article h3 { font-family: var(--font-serif); font-size: 19px; font-weight: 700; color: var(--teal); margin: 28px 0 10px; }
+    article ul { margin: 0 0 24px 0; padding-left: 0; list-style: none; }
+    article ul li { padding: 10px 0 10px 28px; position: relative; color: rgba(255,255,255,0.88); border-bottom: 1px solid var(--teal-divider); }
+    article ul li:first-child { border-top: 1px solid var(--teal-divider); }
+    article ul li::before { content: "🌿"; position: absolute; left: 0; font-size: 13px; }
+    .range-table { width: 100%; border-collapse: collapse; margin: 0 0 24px; }
+    .range-table td { padding: 12px 16px; border-bottom: 1px solid var(--teal-divider); color: rgba(255,255,255,0.88); font-size: 15px; }
+    .range-table td:first-child { font-family: var(--font-mono); color: var(--teal); white-space: nowrap; }
+    .range-table tr:first-child td { border-top: 1px solid var(--teal-divider); }
+    .highlight-box { margin: 32px 0; padding: 24px 28px; background: var(--teal-glow); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .highlight-box p { margin-bottom: 0; color: rgba(255,255,255,0.88); font-size: 16px; line-height: 1.7; font-style: italic; }
+    .variant-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .variant-block h3 { font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--teal); letter-spacing: 1px; margin: 0 0 8px; }
+    .variant-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); }
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px; }
+    .comparison-card { padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .comparison-card .card-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .comparison-card p { font-size: 14px; color: rgba(255,255,255,0.75); margin-bottom: 6px; line-height: 1.5; }
+    .comparison-card p:last-child { margin-bottom: 0; }
+    .comparison-card .verdict { font-size: 14px; color: var(--teal); font-style: italic; margin-top: 10px; }
+    .ratio-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .ratio-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .ratio-block p { margin-bottom: 6px; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .ratio-block p:last-child { margin-bottom: 0; }
+    .insight-box { margin: 32px 0; padding: 24px 28px; background: var(--teal-glow); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; }
+    .insight-box .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; }
+    .insight-box p { margin-bottom: 0; color: rgba(255,255,255,0.88); font-size: 15px; line-height: 1.6; }
+    .pattern-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .pattern-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .pattern-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .meal-block { margin: 0 0 8px; padding: 12px 16px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .meal-block .meal-name { font-size: 15px; color: rgba(255,255,255,0.88); }
+    .meal-block .meal-protein { font-family: var(--font-mono); font-size: 13px; color: var(--teal); }
+    .nutrient-block { margin: 0 0 20px; padding: 20px 24px; background: rgba(255,255,255,0.03); border: 1px solid var(--teal-divider); border-radius: 10px; }
+    .nutrient-block h3 { font-family: var(--font-serif); font-size: 17px; font-weight: 700; color: var(--teal); margin: 0 0 8px; }
+    .nutrient-block p { margin-bottom: 0; font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+    .cta-block { margin: 48px 0; padding: 32px; background: var(--teal-glow); border: 1px solid var(--teal-divider); border-radius: 12px; text-align: center; }
+    .cta-block p { font-size: 18px; margin-bottom: 20px; color: var(--white); }
+    .cta-btn { display: inline-block; background: var(--teal); color: var(--white); text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 32px; border-radius: 50px; }
+    .footer-disclaimer { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--teal-divider); color: var(--muted); font-size: 14px; font-style: italic; line-height: 1.7; }
+    .signoff { margin-top: 16px; color: var(--teal); font-style: italic; font-family: var(--font-serif); }
+    footer { border-top: 1px solid var(--teal-divider); padding: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+    footer a { color: var(--teal); text-decoration: none; }
+    @media (max-width: 600px) { nav { padding: 16px 20px; } .nav-links { display: none; } .hero, article { padding-left: 20px; padding-right: 20px; } .hero { margin-top: 40px; } .comparison-grid { grid-template-columns: 1fr; } .cta-block { padding: 24px 20px; } }
+  </style>
+</head>
+<body>
+<nav><a href="/" class="nav-logo">Thrive<span>IQ</span></a><ul class="nav-links"><li><a href="/#features">Features</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/#blog">Blog</a></li><li><a href="/support.html">Support</a></li></ul></nav>
+<div class="hero">
+  <p class="blog-label">Lab Education &nbsp;·&nbsp; 6 min read</p>
+  <h1>MTHFR: Why Your B12 and Folate Supplements Might Not Be Working</h1>
+  <p class="meta">Educational content only. Not medical advice. Talk to your doctor about what's right for you.</p>
+</div>
+<article>
+  <p>I fell down a rabbit hole on this one — and I'm glad I did, because it explained something that had confused me for a long time.</p>
+  <p>Have you ever taken B12 faithfully, retested, seen your levels go up, and still felt exactly the same? There's a reason for that. And it has four letters: MTHFR.</p>
+  <h2>What it is — in plain English</h2>
+  <p>MTHFR is a gene that produces an enzyme your body uses to convert folate into its active, usable form. A variant in that gene can reduce how efficiently that conversion happens.</p>
+  <p>Why does it matter? Because the active form of folate — methylfolate — is essential for something called methylation. Methylation affects nearly everything: DNA repair, mood regulation, detoxification, cardiovascular health, and how your body processes B vitamins. When methylation isn't working well, the downstream effects show up in a lot of different ways.</p>
+  <h2>The two most common variants</h2>
+  <div class="variant-block">
+    <h3>C677T</h3>
+    <p>The most studied variant. Having one copy reduces enzyme activity by roughly 40%. Having two copies reduces it by up to 70%.</p>
+  </div>
+  <div class="variant-block">
+    <h3>A1298C</h3>
+    <p>A second variant that can compound things when found alongside C677T. Roughly 40–60% of the population carries at least one variant. Most never know.</p>
+  </div>
+  <h2>Why your supplement might not be helping</h2>
+  <p>Here's the thing I didn't know until I dug into this: most B12 supplements contain cyanocobalamin — a synthetic form your body has to convert before it can use. Most folic acid supplements are the same — synthetic, requiring conversion via the very enzyme that isn't working efficiently.</p>
+  <p>So the supplement takes the number up on a lab test. The cellular deficiency stays. You feel the same. And nobody connects the dots.</p>
+  <h2>The folic acid problem hiding in plain sight</h2>
+  <p>This is the part that really got me. In 1998 the US mandated that enriched grain products — bread, pasta, rice, cereals — be fortified with folic acid. The intention was good: reduce neural tube defects in pregnancy.</p>
+  <p>The unintended consequence: Americans are now consuming significant amounts of synthetic folic acid through everyday food without realizing it.</p>
+  <div class="highlight-box">
+    <p>For people with MTHFR variants, synthetic folic acid actually competes with natural folate for the same receptors — and because it can't be efficiently converted, it can block absorption of the folate your body could actually use. You're eating fortified bread, fortified pasta, fortified cereal — and the fortification itself may be working against you.</p>
+  </div>
+  <p>European bread and pasta are largely not fortified this way. The folic acid mandate is an American policy — which is one reason this comes up so often here.</p>
+  <h2>Symptoms worth knowing about</h2>
+  <ul>
+    <li>Fatigue and low energy</li>
+    <li>Brain fog</li>
+    <li>Anxiety or depression</li>
+    <li>Elevated homocysteine</li>
+    <li>Migraines</li>
+    <li>Chemical sensitivities</li>
+    <li>Slow recovery from illness</li>
+    <li>Feeling worse after alcohol or certain medications</li>
+  </ul>
+  <h2>What I'd ask at my next appointment</h2>
+  <ul>
+    <li>Can we test for MTHFR variants given my symptoms?</li>
+    <li>Is my homocysteine worth checking?</li>
+    <li>If I do carry a variant, does that change how we think about my B12 or folate?</li>
+    <li>Are there forms that might be better absorbed given my genetics?</li>
+  </ul>
+  <p>Your supplements may be doing exactly what they're supposed to — and still not giving your cells what they need. Knowing why is the first step.</p>
+  <div class="cta-block">
+    <p>If you're ready to start tracking your full picture, ThriveIQ was built for exactly this.</p>
+    <a href="https://thriveiq.app" class="cta-btn">Start tracking at thriveiq.app</a>
+  </div>
+  <div class="footer-disclaimer">
+    <p>This post is for educational purposes only and is not medical advice. Always discuss your symptoms, lab values, and supplementation with your healthcare provider.</p>
+    <p class="signoff">Let's thrive.</p>
+  </div>
+</article>
+<footer><p>© 2026 ThriveIQ · <a href="/thriveiq-privacy-policy.html">Privacy Policy</a> · <a href="/thriveiq-terms-of-use.html">Terms of Use</a> · <a href="/support.html">Support</a></p></footer>
+</body>
+</html>
