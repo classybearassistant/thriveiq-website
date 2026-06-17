@@ -317,6 +317,39 @@
         "magnesium",
         "inflammation"
       ]
+    },
+    {
+      "id": "aip",
+      "title": "What Is AIP and Why It Changed Everything For My Inflammation",
+      "category": "Autoimmune",
+      "url": "https://thriveiq.app/thriveiq-blog-aip.html",
+      "read_time": "9 min",
+      "tags": [
+        "AIP",
+        "autoimmune",
+        "elimination diet",
+        "inflammation",
+        "gut health",
+        "food intolerance",
+        "joint pain"
+      ]
+    },
+    {
+      "id": "heartburn",
+      "title": "Your Heartburn Might Not Be Too Much Acid \u2014 It Could Be Too Little",
+      "category": "Gut Health",
+      "url": "https://thriveiq.app/thriveiq-blog-heartburn.html",
+      "read_time": "6 min",
+      "tags": [
+        "heartburn",
+        "acid reflux",
+        "stomach acid",
+        "low stomach acid",
+        "gut health",
+        "bloating",
+        "B12",
+        "digestion"
+      ]
     }
   ]
 }
