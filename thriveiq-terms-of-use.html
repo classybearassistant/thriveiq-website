@@ -1,245 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use — ThriveIQ</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --cream: #FAF7F2;
-    --teal: #1D9E75;
-    --charcoal: #1C1C1E;
-    --mid: #6B6B6B;
-    --border: rgba(0,0,0,0.08);
-    --sage-pale: #EBF3EC;
-  }
-  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); line-height: 1.7; }
-  nav {
-    background: rgba(250,247,242,0.95); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border); padding: 0 5%;
-    display: flex; align-items: center; height: 64px;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--charcoal); text-decoration: none; }
-  .nav-logo span { color: var(--teal); }
-  .container { max-width: 780px; margin: 0 auto; padding: 60px 5% 100px; }
-  .eyebrow { font-size: 11px; color: var(--teal); font-family: 'DM Mono', monospace; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
-  h1 { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; color: var(--charcoal); line-height: 1.2; margin-bottom: 8px; }
-  .date { font-size: 13px; color: var(--mid); font-family: 'DM Mono', monospace; margin-bottom: 48px; }
-  h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--charcoal); margin: 40px 0 12px; }
-  h3 { font-size: 16px; font-weight: 600; color: var(--charcoal); margin: 24px 0 8px; }
-  p { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 16px; }
-  ul { margin: 0 0 16px 20px; }
-  li { font-size: 15px; color: var(--mid); line-height: 1.8; margin-bottom: 6px; }
-  .highlight { background: var(--sage-pale); border-left: 3px solid var(--teal); border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 24px 0; }
-  .highlight p { margin: 0; color: var(--charcoal); font-weight: 500; }
-  .warning { background: #FFF8E6; border-left: 3px solid #C9A84C; border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 24px 0; }
-  .warning p { margin: 0; color: var(--charcoal); }
-  a { color: var(--teal); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
-  .contact-box { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px 28px; margin-top: 48px; }
-  .contact-box h3 { margin-top: 0; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — ThriveIQ</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0A0A0F;
+      color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 0 20px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 0 80px;
+    }
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 48px;
+      display: block;
+      text-decoration: none;
+    }
+    .logo span { color: #1D9E75; }
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .effective {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .intro {
+      background: rgba(29, 158, 117, 0.08);
+      border-left: 3px solid #1D9E75;
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 48px;
+      color: #ccc;
+      font-size: 15px;
+    }
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 40px 0 12px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #1D9E75;
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    p {
+      color: #ccc;
+      margin-bottom: 16px;
+    }
+    ul {
+      color: #ccc;
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .highlight {
+      color: #1D9E75;
+      font-weight: 600;
+    }
+    .warning-box {
+      background: rgba(29, 158, 117, 0.06);
+      border: 1px solid rgba(29, 158, 117, 0.2);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .warning-box p {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(29, 158, 117, 0.2);
+      margin: 48px 0;
+    }
+    .contact-block {
+      background: rgba(29, 158, 117, 0.06);
+      border: 1px solid rgba(29, 158, 117, 0.2);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 40px;
+    }
+    .contact-block p { margin-bottom: 4px; }
+    a { color: #1D9E75; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 13px;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
 
-<nav>
-  <a href="index.html" class="nav-logo">Thrive<span>IQ</span></a>
-</nav>
+    <a href="https://thriveiq.app" class="logo">Thrive<span>IQ</span></a>
 
-<div class="container">
+    <h1>Terms of Use</h1>
+    <p class="effective">Effective Date: July 10, 2026 &nbsp;·&nbsp; Last Updated: July 10, 2026</p>
 
-  <div class="eyebrow">Legal</div>
-  <h1>Terms of Use</h1>
-  <p class="date">Effective Date: July 1, 2026 · Last Updated: June 4, 2026</p>
+    <div class="intro">
+      Please read these terms before using ThriveIQ. By downloading or using the app, you agree to these terms. If you don't agree, please don't use ThriveIQ.
+    </div>
 
-  <div class="highlight">
-    <p>Please read these Terms of Use carefully before using ThriveIQ. By downloading or using the app you agree to be bound by these terms.</p>
+    <h2>Who We Are</h2>
+    <p>ThriveIQ is operated by Roarr LLC, doing business as ThriveIQ, based in Knoxville, Tennessee. References to "ThriveIQ," "we," "us," or "our" refer to Roarr LLC dba ThriveIQ.</p>
+
+    <h2>What ThriveIQ Is — and Is Not</h2>
+    <div class="warning-box">
+      <p><span class="highlight">ThriveIQ is a personal wellness logging tool. It is not a medical device, does not provide medical advice, and has not been evaluated by the FDA.</span> Nothing in this app should be used to diagnose, treat, cure, or prevent any disease or health condition. Always consult a qualified healthcare provider before making any decisions about your health.</p>
+    </div>
+    <p>ThriveIQ helps you log and track your food, symptoms, lab values, sleep, hydration, and bowel health. It surfaces patterns in your own logged data and helps you prepare for conversations with your doctor. It does not replace your doctor, and it is not a substitute for professional medical care.</p>
+
+    <h2>Who Can Use ThriveIQ</h2>
+    <p>You must be at least 18 years old to use ThriveIQ. By using the app, you confirm that you are 18 or older. If you are under 18, please do not use ThriveIQ.</p>
+
+    <h2>Your Account</h2>
+    <p>ThriveIQ uses Sign in with Apple for authentication. You are responsible for maintaining the security of your Apple ID and for all activity that occurs under your account. If you believe your account has been compromised, contact us at <a href="mailto:support@thriveiq.app">support@thriveiq.app</a>.</p>
+
+    <h2>Subscriptions and Payments</h2>
+    <p>ThriveIQ offers a free tier and paid subscription plans (Pro and Premium). All subscription purchases are processed by Apple through the App Store. Prices are displayed at the time of purchase.</p>
+    <ul>
+      <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period.</li>
+      <li>You can manage and cancel your subscription at any time in your iPhone Settings → Apple ID → Subscriptions.</li>
+      <li>Refunds are handled by Apple in accordance with Apple's refund policy. We do not process refunds directly.</li>
+      <li>We reserve the right to change subscription pricing with advance notice. Price changes will not affect your current billing period.</li>
+    </ul>
+
+    <h2>Your Health Data</h2>
+    <p>All health data you enter into ThriveIQ — including food logs, lab values, symptom logs, sleep data, and bowel logs — is stored locally on your device. It is not transmitted to or stored on our servers. For full details on how your data is handled, see our <a href="https://thriveiq.app/thriveiq-privacy-policy.html">Privacy Policy</a>.</p>
+    <p>You own your data. You can delete all of it at any time from My Health → Settings → Delete all my data.</p>
+
+    <h2>Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use ThriveIQ for any unlawful purpose</li>
+      <li>Attempt to reverse engineer, decompile, or extract the source code of the app</li>
+      <li>Use ThriveIQ to make clinical or medical decisions without consulting a qualified healthcare provider</li>
+      <li>Share your account or subscription with others</li>
+      <li>Interfere with or disrupt the security or integrity of ThriveIQ or its backend services</li>
+    </ul>
+
+    <h2>Intellectual Property</h2>
+    <p>All content in ThriveIQ — including the app design, ThriveIQ Score algorithm, pattern detection logic, brand assets, and written content — is owned by Roarr LLC and protected by applicable intellectual property laws. You may not reproduce, distribute, or create derivative works from any ThriveIQ content without our written permission.</p>
+
+    <h2>Disclaimer of Warranties</h2>
+    <p>ThriveIQ is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that the app will be uninterrupted, error-free, or free of viruses or other harmful components. We do not warrant the accuracy, completeness, or usefulness of any information provided by the app.</p>
+    <p>The pattern detection, food quality scoring, and lab range displays in ThriveIQ are for informational and educational purposes only. They are not clinical assessments and should not be relied upon as medical advice.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Roarr LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of ThriveIQ, including but not limited to damages for personal injury, lost data, or health decisions made based on information in the app.</p>
+    <p>Our total liability to you for any claims arising from your use of ThriveIQ shall not exceed the amount you paid us in the 12 months prior to the claim.</p>
+
+    <h2>Dispute Resolution and Arbitration</h2>
+    <p>Any dispute, claim, or controversy arising from or relating to these Terms or your use of ThriveIQ will be resolved by binding individual arbitration, not in court. You waive your right to a jury trial and to participate in a class action lawsuit.</p>
+    <p>Arbitration will be conducted by a single arbitrator under the rules of the American Arbitration Association (AAA) Consumer Arbitration Rules. The arbitration will take place in Knox County, Tennessee, or remotely if both parties agree. The arbitrator's decision will be final and binding.</p>
+    <p><span class="highlight">Exception:</span> Either party may bring an individual claim in small claims court if it qualifies.</p>
+    <p>To initiate arbitration, send written notice to: Roarr LLC dba ThriveIQ, Knoxville, Tennessee, or email <a href="mailto:legal@thriveiq.app">legal@thriveiq.app</a>.</p>
+
+    <h2>Governing Law</h2>
+    <p>These Terms are governed by the laws of the State of Tennessee, without regard to its conflict of law provisions. Any matters not subject to arbitration will be resolved in the state or federal courts located in Knox County, Tennessee.</p>
+
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. If we make material changes, we will notify you via a notice in the app and update the effective date at the top of this page. Your continued use of ThriveIQ after changes are posted constitutes your acceptance of the updated Terms.</p>
+
+    <h2>Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to ThriveIQ at any time for violations of these Terms. You may stop using ThriveIQ at any time by deleting the app. Termination does not entitle you to a refund — refund requests are handled by Apple.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these Terms? Email us at <a href="mailto:support@thriveiq.app">support@thriveiq.app</a>.</p>
+
+    <hr class="divider">
+
+    <div class="contact-block">
+      <p style="color:#1D9E75; font-family: Georgia, serif; font-size:17px; font-weight:700; margin-bottom:12px;">Questions about these terms?</p>
+      <p>Email us directly:</p>
+      <p><a href="mailto:support@thriveiq.app">support@thriveiq.app</a></p>
+      <p style="margin-top:12px; font-size:14px; color:#666;">Roarr LLC dba ThriveIQ &nbsp;·&nbsp; Knoxville, Tennessee</p>
+    </div>
+
+    <div class="footer">
+      <span>© 2026 Roarr LLC dba ThriveIQ. All rights reserved.</span>
+      <span><a href="https://thriveiq.app">thriveiq.app</a></span>
+    </div>
+
   </div>
-
-  <p>These Terms of Use ("Terms") govern your use of the ThriveIQ mobile application and website at thriveiq.app (collectively, the "Service"), operated by ThriveIQ ("we," "our," or "us"). By accessing or using ThriveIQ you agree to these Terms. If you do not agree, do not use the Service.</p>
-
-  <hr class="divider">
-
-  <h2>1. The Service</h2>
-
-  <p>ThriveIQ is a personal wellness tracking application that helps users log meals, track food quality scores, monitor symptoms, record biomarker values, and generate health summaries. The Service uses artificial intelligence to analyze meal photos and provide nutritional estimates and food quality assessments.</p>
-
-  <div class="warning">
-    <p><strong>Medical Disclaimer:</strong> ThriveIQ is for informational and personal wellness tracking purposes only. It is not a medical device and does not provide medical advice, diagnosis, or treatment. Food quality scores, biomarker insights, symptom correlations, food-medication interaction flags, reference ranges, and all other content and features are educational tools only and do not constitute medical advice. Always consult a qualified healthcare provider before making decisions about your health, diet, medications, or supplements. Never disregard professional medical advice or delay seeking it because of something you read or saw in ThriveIQ.</p>
-  </div>
-
-  <hr class="divider">
-
-  <h2>2. Eligibility</h2>
-
-  <p>You must be at least 13 years old to use ThriveIQ. If you are under 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf. By using ThriveIQ you represent and warrant that you meet these eligibility requirements.</p>
-
-  <hr class="divider">
-
-  <h2>3. Your Account</h2>
-
-  <h3>Account Creation</h3>
-  <p>To access certain features you must create an account. You agree to provide accurate, current, and complete information and to keep your account information updated. You are responsible for maintaining the confidentiality of your password and for all activity that occurs under your account.</p>
-
-  <h3>Account Security</h3>
-  <p>You agree to notify us immediately at support@thriveiq.app if you become aware of any unauthorized use of your account. We are not liable for any loss resulting from unauthorized use of your account.</p>
-
-  <h3>One Account Per Person</h3>
-  <p>Each account is for a single individual's personal use only. You may not share your account with others or create accounts on behalf of others without their consent.</p>
-
-  <hr class="divider">
-
-  <h2>4. Subscriptions and Payments</h2>
-
-  <h3>Free Tier</h3>
-  <p>ThriveIQ offers a free tier with limited features as described in the app. No payment is required to use the free tier.</p>
-
-  <h3>Paid Subscriptions</h3>
-  <p>ThriveIQ offers Pro and Premium subscription tiers with additional features. Subscriptions are billed through Apple's App Store using your Apple ID. By purchasing a subscription you agree to Apple's payment terms.</p>
-
-  <h3>Subscription Terms</h3>
-  <ul>
-    <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period</li>
-    <li>Your Apple ID account will be charged for renewal within 24 hours before the end of the current period</li>
-    <li>You can manage and cancel subscriptions in your Apple ID Account Settings</li>
-    <li>No refunds are provided for partial subscription periods except as required by law</li>
-    <li>Free trial periods, if offered, will automatically convert to paid subscriptions unless cancelled before the trial ends</li>
-  </ul>
-
-  <h3>Price Changes</h3>
-  <p>We reserve the right to change subscription prices. We will provide reasonable notice of any price changes through the app or by email. Continued use of ThriveIQ after a price change takes effect constitutes your acceptance of the new price.</p>
-
-  <hr class="divider">
-
-  <h2>5. Acceptable Use</h2>
-
-  <p>You agree to use ThriveIQ only for lawful, personal wellness tracking purposes. You agree NOT to:</p>
-  <ul>
-    <li>Use ThriveIQ for any commercial purpose without our written consent</li>
-    <li>Attempt to reverse engineer, decompile, or extract the source code of ThriveIQ</li>
-    <li>Use ThriveIQ to store or transmit malicious code</li>
-    <li>Attempt to gain unauthorized access to any part of the Service or its related systems</li>
-    <li>Use automated means to access or scrape the Service</li>
-    <li>Use ThriveIQ in any way that violates applicable laws or regulations</li>
-    <li>Share your account credentials with others</li>
-    <li>Impersonate any person or entity</li>
-    <li>Upload content that violates any third party's rights</li>
-  </ul>
-
-  <hr class="divider">
-
-  <h2>6. Health Data and Accuracy</h2>
-
-  <h3>AI-Generated Estimates</h3>
-  <p>Food quality scores, macro estimates, calorie counts, and nutritional information generated by ThriveIQ are estimates based on visual analysis and your profile settings. They are not guaranteed to be accurate and should not be relied upon for medical, dietary, or clinical decision-making.</p>
-
-  <h3>Biomarker Reference Ranges</h3>
-  <p>Reference ranges shown in ThriveIQ include both standard laboratory ranges and functional medicine optimal ranges cited in peer-reviewed research. These are provided for educational purposes only. Individual optimal ranges vary significantly. Always discuss your lab results with your healthcare provider.</p>
-
-  <h3>Food and Medication Interaction Flags</h3>
-  <p>Food and medication interaction information provided by ThriveIQ is for informational purposes only. It is not comprehensive, may not reflect your specific situation, and does not constitute medical or pharmacological advice. Always consult your doctor or pharmacist before making any changes to your medications or diet based on information from ThriveIQ.</p>
-
-  <h3>Your Responsibility</h3>
-  <p>You are solely responsible for how you use the information provided by ThriveIQ. We strongly encourage you to verify any health-related information with qualified healthcare professionals before acting on it.</p>
-
-  <hr class="divider">
-
-  <h2>7. Your Content</h2>
-
-  <p>You own the content you create in ThriveIQ, including your meal logs, symptom entries, and biomarker values. By using ThriveIQ you grant us a limited license to use your content solely to provide and improve the Service. We do not claim ownership of your personal health data.</p>
-
-  <p>You are responsible for ensuring that any content you upload — including meal photos — does not violate any third party's rights or any applicable laws.</p>
-
-  <hr class="divider">
-
-  <h2>8. Intellectual Property</h2>
-
-  <p>ThriveIQ and all of its content, features, and functionality — including but not limited to the software, design, text, graphics, logos, and icons — are owned by ThriveIQ and are protected by United States and international intellectual property laws.</p>
-
-  <p>You may not copy, modify, distribute, sell, or lease any part of ThriveIQ, nor may you reverse engineer or attempt to extract the source code, unless you have our written permission or applicable law permits it.</p>
-
-  <hr class="divider">
-
-  <h2>9. Third-Party Services</h2>
-
-  <p>ThriveIQ integrates with third-party services including Apple HealthKit and the Anthropic Claude API. Your use of these integrations is subject to the respective third party's terms of service and privacy policies. We are not responsible for the practices of third-party services.</p>
-
-  <p>Links to third-party websites or resources (such as lab ordering services referenced in the Advocacy section) are provided for your convenience. We do not endorse and are not responsible for the content, products, or services on those sites.</p>
-
-  <hr class="divider">
-
-  <h2>10. Disclaimers and Limitation of Liability</h2>
-
-  <h3>No Warranties</h3>
-  <p>ThriveIQ is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. We do not warrant that ThriveIQ will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
-
-  <h3>Limitation of Liability</h3>
-  <p>To the maximum extent permitted by applicable law, ThriveIQ and its founders, employees, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the Service, even if we have been advised of the possibility of such damages.</p>
-
-  <p>Our total liability to you for any claims arising from these Terms or your use of ThriveIQ shall not exceed the amount you paid to us in the twelve months preceding the claim, or $100, whichever is greater.</p>
-
-  <h3>Health Decisions</h3>
-  <p>We are not liable for any health outcomes, medical decisions, or consequences arising from your use of ThriveIQ or reliance on any information provided by the Service. ThriveIQ does not replace professional medical care.</p>
-
-  <hr class="divider">
-
-  <h2>11. Indemnification</h2>
-
-  <p>You agree to indemnify, defend, and hold harmless ThriveIQ and its founders, employees, and affiliates from any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorney's fees) arising from your use of ThriveIQ, your violation of these Terms, or your violation of any rights of another person or entity.</p>
-
-  <hr class="divider">
-
-  <h2>12. Termination</h2>
-
-  <p>We may suspend or terminate your account and access to ThriveIQ at any time, with or without notice, if we believe you have violated these Terms or for any other reason at our discretion.</p>
-
-  <p>You may terminate your account at any time by going to Me → Settings → Delete Account in the app, or by contacting us at support@thriveiq.app.</p>
-
-  <p>Upon termination, your right to use ThriveIQ ceases immediately. Sections of these Terms that by their nature should survive termination will survive, including sections on intellectual property, disclaimers, limitation of liability, and indemnification.</p>
-
-  <hr class="divider">
-
-  <h2>13. Governing Law</h2>
-
-  <p>These Terms are governed by the laws of the State of Tennessee, United States, without regard to its conflict of law principles. Any disputes arising from these Terms or your use of ThriveIQ shall be resolved in the courts located in Knox County, Tennessee.</p>
-
-  <hr class="divider">
-
-  <h2>14. Changes to These Terms</h2>
-
-  <p>We may update these Terms from time to time. When we make material changes we will notify you through the app and update the "Last Updated" date at the top. Your continued use of ThriveIQ after changes take effect constitutes your acceptance of the updated Terms.</p>
-
-  <hr class="divider">
-
-  <h2>15. Apple App Store Additional Terms</h2>
-
-  <p>If you downloaded ThriveIQ from the Apple App Store, the following additional terms apply:</p>
-  <ul>
-    <li>These Terms are between you and ThriveIQ only, not with Apple</li>
-    <li>Apple has no obligation to provide any maintenance or support for ThriveIQ</li>
-    <li>Apple is not responsible for any product liability claims related to ThriveIQ</li>
-    <li>Apple is a third-party beneficiary of these Terms and may enforce them against you</li>
-    <li>In the event of any conflict between these Terms and Apple's App Store terms, Apple's terms will govern with respect to App Store usage</li>
-  </ul>
-
-  <hr class="divider">
-
-  <div class="contact-box">
-    <h3>Contact Us</h3>
-    <p>If you have questions about these Terms of Use, please contact us:</p>
-    <p>
-      <strong>Email:</strong> <a href="mailto:hello@thriveiq.app">hello@thriveiq.app</a><br>
-      <strong>Support:</strong> <a href="mailto:support@thriveiq.app">support@thriveiq.app</a><br>
-      <strong>Website:</strong> <a href="https://thriveiq.app">thriveiq.app</a><br>
-      <strong>Mailing address:</strong> ThriveIQ · Knoxville, TN
-    </p>
-  </div>
-
-</div>
-
 </body>
 </html>
