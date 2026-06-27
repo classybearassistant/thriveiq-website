@@ -754,42 +754,43 @@ function submitWaitlist(e) {
       <div class="phone-mockup">
         <div class="phone-notch"></div>
         <div class="phone-screen">
-          <div class="phone-label">Daily Tracker</div>
-          <div class="phone-title">What did<br/>you eat today?</div>
-          <div class="phone-grid">
-            <div class="phone-card cal">
-              <div class="phone-card-label">Calories</div>
-              <div class="phone-card-val">1,240</div>
-              <div class="phone-card-sub">of 1,800 kcal</div>
-            </div>
-            <div class="phone-card pro">
-              <div class="phone-card-label">Protein</div>
-              <div class="phone-card-val">94g</div>
-              <div class="phone-card-sub">of 150g</div>
-            </div>
-            <div class="phone-card carb">
-              <div class="phone-card-label">Carbs</div>
-              <div class="phone-card-val">88g</div>
-              <div class="phone-card-sub">of 120g</div>
-            </div>
-            <div class="phone-card fat">
-              <div class="phone-card-label">Fat</div>
-              <div class="phone-card-val">44g</div>
-              <div class="phone-card-sub">of 65g</div>
-            </div>
+          <div class="phone-label">🌿 Track</div>
+          <div class="phone-title" style="font-size:13px;margin-bottom:10px">Capture what you eat</div>
+          <div style="display:flex;flex-direction:column;align-items:center;margin-bottom:10px">
+            <svg width="110" height="110" viewBox="0 0 110 110">
+              <circle cx="55" cy="55" r="46" fill="none" stroke="rgba(29,158,117,0.15)" stroke-width="10"/>
+              <circle cx="55" cy="55" r="46" fill="none" stroke="#1D9E75" stroke-width="10" stroke-linecap="round"
+                stroke-dasharray="289" stroke-dashoffset="72" transform="rotate(-90 55 55)"/>
+              <text x="55" y="50" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="22" font-weight="700">87</text>
+              <text x="55" y="64" text-anchor="middle" fill="#1D9E75" font-family="Georgia,serif" font-size="9">ThriveIQ Score</text>
+              <text x="55" y="76" text-anchor="middle" fill="#1D9E75" font-family="Courier New,monospace" font-size="8" letter-spacing="1">STRONG</text>
+            </svg>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);font-family:Courier New,monospace;margin-top:2px">Aim for 70+ today</div>
           </div>
           <div class="phone-score-card">
-            <div class="phone-score-ring">87</div>
+            <div class="phone-score-ring" style="width:32px;height:32px;font-size:11px">87</div>
             <div class="phone-score-info">
               <div class="phone-score-name">Grass-fed Ribeye + Roasted Veg</div>
-              <div class="phone-score-label">Strong · 12:34 PM</div>
+              <div class="phone-score-label">🌿 Strong · 12:34 PM</div>
             </div>
           </div>
-          <div class="phone-meal-card">
-            <div class="phone-meal-title">Today's Plan</div>
-            <div class="phone-meal-item">🥚 Eggs + avocado <span class="phone-meal-kcal">380</span></div>
-            <div class="phone-meal-item">🥩 Ribeye + veg <span class="phone-meal-kcal">520</span></div>
-            <div class="phone-meal-item">🐟 Salmon salad <span class="phone-meal-kcal">480</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;margin-top:8px;padding:0 4px">
+            <div style="background:rgba(29,158,117,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px">🌿</div>
+              <div style="font-size:8px;color:#1D9E75;font-family:Courier New,monospace">Thriving</div>
+            </div>
+            <div style="background:rgba(232,168,56,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px">🙂</div>
+              <div style="font-size:8px;color:#E8A838;font-family:Courier New,monospace">Pretty good</div>
+            </div>
+            <div style="background:rgba(232,149,109,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px">😴</div>
+              <div style="font-size:8px;color:#E8956D;font-family:Courier New,monospace">Tired</div>
+            </div>
+            <div style="background:rgba(196,107,90,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px">😞</div>
+              <div style="font-size:8px;color:#C46B5A;font-family:Courier New,monospace">Not great</div>
+            </div>
           </div>
         </div>
       </div>
