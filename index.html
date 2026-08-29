@@ -23,8 +23,8 @@
     --sage: #7A9E7E;
     --sage-light: #B8D4BA;
     --sage-pale: #EBF3EC;
-    --teal: #2D8C8C;
-    --teal-light: #4ECDC4;
+    --teal: #1D9E75;
+    --teal-light: #5DCAA5;
     --earth: #8B6E52;
     --earth-light: #C4A882;
     --charcoal: #1C1C1E;
@@ -107,7 +107,7 @@
     content: '';
     position: absolute; top: -20%; right: -10%;
     width: 600px; height: 600px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(78,205,196,0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(29,158,117,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
   .hero-inner { max-width: 1100px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -171,7 +171,7 @@
     width: 100px; height: 28px; background: var(--charcoal);
     border-radius: 20px; z-index: 10;
   }
-  .phone-label { font-size: 9px; color: rgba(78,205,196,0.7); font-family: 'DM Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; }
+  .phone-label { font-size: 9px; color: rgba(29,158,117,0.7); font-family: 'DM Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; }
   .phone-title { font-family: 'Playfair Display', serif; font-size: 18px; color: white; font-weight: 700; line-height: 1.2; }
   .phone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
   .phone-card {
@@ -182,22 +182,22 @@
   .phone-card-val { font-size: 16px; font-weight: 700; color: white; line-height: 1.2; margin-top: 2px; }
   .phone-card-sub { font-size: 8px; color: rgba(255,255,255,0.3); font-family: 'DM Mono', monospace; }
   .phone-card.cal .phone-card-val { color: #FF6B35; }
-  .phone-card.pro .phone-card-val { color: #4ECDC4; }
+  .phone-card.pro .phone-card-val { color: #1D9E75; }
   .phone-card.carb .phone-card-val { color: #FFE66D; }
   .phone-card.fat .phone-card-val { color: #A8E6CF; }
   .phone-score-card {
-    background: rgba(78,205,196,0.08); border: 1px solid rgba(78,205,196,0.2);
+    background: rgba(29,158,117,0.08); border: 1px solid rgba(29,158,117,0.2);
     border-radius: 12px; padding: 10px;
     display: flex; align-items: center; gap: 10px;
   }
   .phone-score-ring {
     width: 36px; height: 36px; border-radius: 50%;
-    border: 3px solid #4ECDC4; display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 800; color: #4ECDC4; font-family: 'DM Mono', monospace; flex-shrink: 0;
+    border: 3px solid #1D9E75; display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800; color: #1D9E75; font-family: 'DM Mono', monospace; flex-shrink: 0;
   }
   .phone-score-info { }
   .phone-score-name { font-size: 11px; font-weight: 600; color: white; }
-  .phone-score-label { font-size: 9px; color: #4ECDC4; font-family: 'DM Mono', monospace; }
+  .phone-score-label { font-size: 9px; color: #1D9E75; font-family: 'DM Mono', monospace; }
   .phone-meal-card {
     background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
     border-radius: 12px; padding: 10px;
@@ -358,7 +358,7 @@
     content: '';
     position: absolute; top: -50%; left: -20%;
     width: 800px; height: 800px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(78,205,196,0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(29,158,117,0.06) 0%, transparent 70%);
     pointer-events: none;
   }
   .mission-inner { max-width: 800px; margin: 0 auto; text-align: center; position: relative; }
@@ -392,7 +392,7 @@
   .download-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .app-store-btn {
     background: var(--charcoal); color: white;
-    padding: 14px 28px; border-radius: 8px; text-decoration: none;
+    padding: 14px 28px; border-radius: 14px; text-decoration: none;
     display: flex; align-items: center; gap: 10px;
     transition: all 0.2s; border: 2px solid transparent;
   }
@@ -409,7 +409,7 @@
   }
   .footer-inner { max-width: 1100px; margin: 0 auto; }
   .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
-  .footer-brand .nav-logo { color: white; margin-bottom: 12px; display: inline-flex; flex-direction: row; align-items: center; gap: 4px; }
+  .footer-brand .nav-logo { color: white; margin-bottom: 12px; display: block; }
   .footer-brand p { font-size: 13px; line-height: 1.7; max-width: 260px; }
   .footer-col h4 { font-size: 13px; font-weight: 600; color: white; margin-bottom: 16px; }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
@@ -427,7 +427,7 @@
   .newsletter-bar p { color: white; font-size: 15px; font-weight: 500; }
   .newsletter-form { display: flex; gap: 8px; }
   .newsletter-input {
-    padding: 10px 18px; border-radius: 100px; border: none;
+    padding: 10px 18px; border-radius: 8px; border: none;
     font-size: 14px; font-family: 'DM Sans', sans-serif;
     width: 240px; outline: none;
     background: rgba(255,255,255,0.9);
@@ -645,7 +645,7 @@
   </div>
   <form id="waitlist-form" onsubmit="submitWaitlist(event)" style="display:flex;gap:8px;align-items:center;">
     <input type="email" id="waitlist-email" placeholder="your@email.com" required
-      style="padding:6px 12px;border-radius:100px;border:none;font-size:13px;width:200px;background:rgba(255,255,255,0.15);color:white;outline:none;font-family:inherit;"
+      style="padding:6px 12px;border-radius:8px;border:none;font-size:13px;width:200px;background:rgba(255,255,255,0.15);color:white;outline:none;font-family:inherit;"
       onfocus="this.style.background='rgba(255,255,255,0.25)'"
       onblur="this.style.background='rgba(255,255,255,0.15)'"
     />
@@ -693,9 +693,9 @@ function submitWaitlist(e) {
 
 <!-- NAV -->
 <nav>
-  <a href="#" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0;">
+  <a href="#" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;">
     <!-- Leaf mark -->
-    <svg width="62" height="64" viewBox="5 4 62 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block;">
+    <svg width="52" height="64" viewBox="0 0 72 76" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;display:block;">
       <path d="M36 6 C22 17 15 38 23 56 C29 68 43 70 49 58 C57 40 53 17 36 6Z" fill="#1D9E75" opacity="0.18"/>
       <path d="M36 6 C22 17 15 38 23 56 C29 68 43 70 49 58 C57 40 53 17 36 6Z" fill="none" stroke="#1D9E75" stroke-width="2.5" stroke-linejoin="round"/>
       <line x1="36" y1="9" x2="36" y2="65" stroke="#1D9E75" stroke-width="1.2" opacity="0.3" stroke-dasharray="4 3"/>
@@ -703,7 +703,7 @@ function submitWaitlist(e) {
       <circle cx="25" cy="23" r="4" fill="#1D9E75"/>
     </svg>
     <!-- Divider -->
-    <div style="width:1px;height:56px;background:#1D9E75;opacity:0.3;flex-shrink:0;"></div>
+    <div style="width:1px;height:52px;background:#1D9E75;opacity:0.3;flex-shrink:0;"></div>
     <!-- Wordmark + tagline -->
     <div style="display:flex;flex-direction:column;justify-content:center;gap:0px;">
       <div style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;letter-spacing:-0.5px;line-height:1.1;color:#1C1C1E;">Thrive<span style="color:#1D9E75;">IQ</span></div>
@@ -728,11 +728,11 @@ function submitWaitlist(e) {
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-eyebrow"><img src="images/logo-icon.png" alt="" style="width:14px;height:14px;display:inline-block;vertical-align:-2px;" /> Know What You Eat</div>
+      <div class="hero-eyebrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg> Know What You Eat</div>
       <h1>It's not in your head.<br/><em>It's on your plate.</em></h1>
       <p class="hero-sub">ThriveIQ uses AI to analyze every meal — not just calories, but ingredient quality, seed oil content, and nutrient density. Built by someone who needed this app and couldn't find it.</p>
       <div class="hero-actions">
-        <a href="#download" class="btn-primary">⬇ Download Free</a>
+        <a href="#download" class="btn-primary">Join the Waitlist</a>
         <a href="#story" class="btn-secondary">Read My Story →</a>
       </div>
       <div class="hero-stats">
@@ -741,18 +741,71 @@ function submitWaitlist(e) {
           <div class="hero-stat-label">Food quality score</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">21</div>
-          <div class="hero-stat-label">Biomarkers tracked</div>
+          <div class="hero-stat-num">66</div>
+          <div class="hero-stat-label">Lab markers tracked</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">Free</div>
-          <div class="hero-stat-label">My Health Journal</div>
+          <div class="hero-stat-num">1</div>
+          <div class="hero-stat-label">Health Journal, every plan</div>
         </div>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="phone-mockup" style="padding-top:14px;box-sizing:border-box;">
-        <img src="images/screenshots/hero-track-list.jpg" alt="ThriveIQ Track screen showing captured meals with ThriveIQ Scores" style="width:100%;height:calc(100% - 14px);object-fit:cover;display:block;" />
+      <div class="phone-mockup">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg> Track</div>
+          <div class="phone-title" style="font-size:13px;margin-bottom:10px">Capture what you eat</div>
+          <div style="display:flex;flex-direction:column;align-items:center;margin-bottom:10px">
+            <svg width="110" height="110" viewBox="0 0 110 110">
+              <circle cx="55" cy="55" r="46" fill="none" stroke="rgba(29,158,117,0.15)" stroke-width="10"/>
+              <circle cx="55" cy="55" r="46" fill="none" stroke="#1D9E75" stroke-width="10" stroke-linecap="round"
+                stroke-dasharray="289" stroke-dashoffset="72" transform="rotate(-90 55 55)"/>
+              <text x="55" y="50" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="22" font-weight="700">87</text>
+              <text x="55" y="64" text-anchor="middle" fill="#1D9E75" font-family="Georgia,serif" font-size="9">ThriveIQ Score</text>
+              <text x="55" y="76" text-anchor="middle" fill="#1D9E75" font-family="Courier New,monospace" font-size="8" letter-spacing="1">STRONG</text>
+            </svg>
+            <div style="font-size:9px;color:rgba(255,255,255,0.4);font-family:Courier New,monospace;margin-top:2px">Aim for 70+ today</div>
+          </div>
+          <div class="phone-score-card">
+            <div class="phone-score-ring" style="width:32px;height:32px;font-size:11px">87</div>
+            <div class="phone-score-info">
+              <div class="phone-score-name">Grass-fed Ribeye + Roasted Veg</div>
+              <div class="phone-score-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg> Strong · 12:34 PM</div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;margin-top:8px;padding:0 4px">
+            <div style="background:rgba(29,158,117,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg></div>
+              <div style="font-size:8px;color:#1D9E75;font-family:Courier New,monospace">Thriving</div>
+            </div>
+            <div style="background:rgba(232,168,56,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px">🙂</div>
+              <div style="font-size:8px;color:#E8A838;font-family:Courier New,monospace">Pretty good</div>
+            </div>
+            <div style="background:rgba(232,149,109,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px">😴</div>
+              <div style="font-size:8px;color:#E8956D;font-family:Courier New,monospace">Tired</div>
+            </div>
+            <div style="background:rgba(196,107,90,0.15);border-radius:8px;padding:6px 4px;text-align:center">
+              <div style="font-size:14px">😞</div>
+              <div style="font-size:8px;color:#C46B5A;font-family:Courier New,monospace">Not great</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-1">
+        <span style="font-size:20px"></span>
+        <div>
+          <div style="font-size:11px;color:#6B6B6B">THRIVEIQ SCORE</div>
+          <div style="font-size:18px;font-weight:800;color:#1D9E75;font-family:'DM Mono',monospace">87</div>
+          <div style="font-size:10px;color:#1D9E75">&#127807; Strong</div>
+        </div>
+      </div>
+      <div class="hero-float-2">
+        <div style="font-size:11px;color:#9B9B9B;font-family:'DM Mono',monospace;margin-bottom:2px">FOOD QUALITY TODAY</div>
+        <div class="float-score">82<span style="font-size:13px;font-weight:400;color:#9B9B9B">/100</span></div>
+        <div style="font-size:11px;color:#7A9E7E;margin-top:2px">↑ Up from 58 last week</div>
       </div>
     </div>
   </div>
@@ -761,18 +814,11 @@ function submitWaitlist(e) {
 <!-- THE PROBLEM -->
 <section style="padding:80px 5%;background:#FAF7F2;">
   <div style="max-width:900px;margin:0 auto;text-align:center;">
-    <div style="font-size:11px;letter-spacing:3px;color:#2D8C8C;font-family:'DM Mono',monospace;text-transform:uppercase;margin-bottom:24px;">Sound familiar?</div>
+    <div style="font-size:11px;letter-spacing:3px;color:#1D9E75;font-family:'DM Mono',monospace;text-transform:uppercase;margin-bottom:24px;">Sound familiar?</div>
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,48px);font-weight:700;color:#1C1C1E;line-height:1.2;margin-bottom:48px;">"Your labs look fine.<br/>It's probably just stress."</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;text-align:left;">
       <div style="background:white;border-radius:16px;padding:28px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 2px 12px rgba(0,0,0,0.04);">
-        <div style="width:40px;height:40px;border-radius:10px;background:#E1F5EE;display:flex;align-items:center;justify-content:center;margin-bottom:12px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;">
-            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/>
-            <path d="M9 10l.01 0"/>
-            <path d="M15 10l.01 0"/>
-            <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0"/>
-          </svg>
-        </div>
+        <div style="font-size:28px;margin-bottom:12px;">😔</div>
         <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:#1C1C1E;margin-bottom:8px;">You feel terrible. Tests say normal.</div>
         <div style="font-size:14px;color:#6B6B6B;line-height:1.7;">Every test comes back fine. But you know something is wrong. You're not imagining it.</div>
       </div>
@@ -835,7 +881,7 @@ function submitWaitlist(e) {
 
           <div style="display:flex;gap:16px;padding-bottom:24px;position:relative;">
             <div style="position:absolute;left:15px;top:32px;bottom:0;width:1px;background:var(--sage-light);"></div>
-            <div style="width:32px;height:32px;border-radius:50%;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">⚡</div>
+            <div style="width:32px;height:32px;border-radius:8px;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">⚡</div>
             <div>
               <div style="font-size:11px;color:var(--sage);font-family:'DM Mono',monospace;letter-spacing:0.08em;margin-bottom:3px;">2013</div>
               <div style="font-size:14px;font-weight:600;color:var(--charcoal);margin-bottom:3px;">Levaquin toxicity</div>
@@ -845,7 +891,7 @@ function submitWaitlist(e) {
 
           <div style="display:flex;gap:16px;padding-bottom:24px;position:relative;">
             <div style="position:absolute;left:15px;top:32px;bottom:0;width:1px;background:var(--sage-light);"></div>
-            <div style="width:32px;height:32px;border-radius:50%;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🧹</div>
+            <div style="width:32px;height:32px;border-radius:8px;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🧹</div>
             <div>
               <div style="font-size:11px;color:var(--sage);font-family:'DM Mono',monospace;letter-spacing:0.08em;margin-bottom:3px;">First Steps</div>
               <div style="font-size:14px;font-weight:600;color:var(--charcoal);margin-bottom:3px;">Eliminating chemicals</div>
@@ -855,7 +901,7 @@ function submitWaitlist(e) {
 
           <div style="display:flex;gap:16px;padding-bottom:24px;position:relative;">
             <div style="position:absolute;left:15px;top:32px;bottom:0;width:1px;background:var(--sage-light);"></div>
-            <div style="width:32px;height:32px;border-radius:50%;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📚</div>
+            <div style="width:32px;height:32px;border-radius:8px;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📚</div>
             <div>
               <div style="font-size:11px;color:var(--sage);font-family:'DM Mono',monospace;letter-spacing:0.08em;margin-bottom:3px;">The Research Years</div>
               <div style="font-size:14px;font-weight:600;color:var(--charcoal);margin-bottom:3px;">Food as medicine</div>
@@ -865,7 +911,7 @@ function submitWaitlist(e) {
 
           <div style="display:flex;gap:16px;padding-bottom:24px;position:relative;">
             <div style="position:absolute;left:15px;top:32px;bottom:0;width:1px;background:var(--sage-light);"></div>
-            <div style="width:32px;height:32px;border-radius:50%;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🛢️</div>
+            <div style="width:32px;height:32px;border-radius:8px;background:white;border:2px solid var(--sage-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🛢️</div>
             <div>
               <div style="font-size:11px;color:var(--sage);font-family:'DM Mono',monospace;letter-spacing:0.08em;margin-bottom:3px;">The Discovery</div>
               <div style="font-size:14px;font-weight:600;color:var(--charcoal);margin-bottom:3px;">Seed oils — the missing piece</div>
@@ -874,7 +920,7 @@ function submitWaitlist(e) {
           </div>
 
           <div style="display:flex;gap:16px;">
-            <div style="width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🌿</div>
+            <div style="width:32px;height:32px;border-radius:8px;background:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="white" fill-opacity="0.9"/></g></svg></div>
             <div>
               <div style="font-size:11px;color:var(--teal);font-family:'DM Mono',monospace;letter-spacing:0.08em;margin-bottom:3px;">Today</div>
               <div style="font-size:14px;font-weight:600;color:var(--charcoal);margin-bottom:3px;">ThriveIQ</div>
@@ -896,11 +942,11 @@ function submitWaitlist(e) {
       <h2 class="section-title">More than a calorie counter.<br/>A <em>whole health</em> intelligence system.</h2>
     </div>
     <div class="features-grid">
-      <div class="feature-card" style="border-color: rgba(78,205,196,0.3); background: rgba(78,205,196,0.04);">
-        <div class="feature-icon" style="background: rgba(78,205,196,0.15);">📋</div>
-        <h3>My Health Journal <span style="font-size:11px;color:#4ECDC4;font-family:'DM Mono',monospace;font-weight:500;vertical-align:middle;margin-left:6px;">FREE</span></h3>
+      <div class="feature-card" style="border-color: rgba(29,158,117,0.3); background: rgba(29,158,117,0.04);">
+        <div class="feature-icon" style="background: rgba(29,158,117,0.15);">📋</div>
+        <h3>My Health Journal</h3>
         <p>One tap generates a comprehensive PDF of your food quality trends, symptom patterns, biomarker history, bowel health, and Questions I Want to Ask — organized from your logs so you don't forget to bring them up.</p>
-        <span class="feature-tag" style="background:rgba(78,205,196,0.12);color:#4ECDC4;">Walk in prepared</span>
+        <span class="feature-tag" style="background:rgba(29,158,117,0.12);color:#1D9E75;">Walk in prepared</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📸</div>
@@ -911,7 +957,7 @@ function submitWaitlist(e) {
       <div class="feature-card">
         <div class="feature-icon">🔥</div>
         <h3>Food Quality Score</h3>
-        <p>Not all calories are equal. A grass-fed ribeye scores 90. Seed-oil fried chicken scores 22. Know the difference and understand why it matters for your body.</p>
+        <p>Not all calories are equal. A grass-fed ribeye scores Strong. Seed-oil fried chicken scores Room to Improve. Know the difference and understand why it matters for your body.</p>
         <span class="feature-tag">0–100 scale</span>
       </div>
       <div class="feature-card">
@@ -924,13 +970,13 @@ function submitWaitlist(e) {
         <div class="feature-icon">🩸</div>
         <h3>Biomarker Tracker</h3>
         <p>Log your lab results — fasting insulin, glucose, HbA1c, hs-CRP, cholesterol ratios, and more. Log your lab results and track them over time. ThriveIQ displays your values against standard reference ranges so you can see what's changing — and bring the full picture to your next appointment.</p>
-        <span class="feature-tag">21 biomarkers tracked</span>
+        <span class="feature-tag">66 lab markers tracked</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">💊</div>
         <h3>Food & Medication Interactions</h3>
         <p>Log your medications and supplements. ThriveIQ quietly flags meals containing foods known to interact — warfarin and leafy greens, statins and grapefruit, thyroid meds and soy. Informational only, never alarmist.</p>
-        <span class="feature-tag">Pro feature</span>
+        <span class="feature-tag">Included in every plan</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🗓</div>
@@ -971,35 +1017,35 @@ function submitWaitlist(e) {
       <div>
         <div style="display:flex;flex-direction:column;gap:20px;">
           <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">✨</div>
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">✨</div>
             <div>
               <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Questions written for you — from your data</div>
               <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">You don't have to know the right medical words. ThriveIQ reads your data and tells you exactly what to ask.</div>
             </div>
           </div>
           <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">😣</div>
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">😣</div>
             <div>
               <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Your symptoms, with dates and numbers</div>
               <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">Not "I've been tired" — but fatigue 18 out of 30 days, severity 6.2/10, primarily afternoon, correlating with low-quality meals.</div>
             </div>
           </div>
           <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🩸</div>
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🩸</div>
             <div>
               <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Lab trends over time</div>
               <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">See where you started and where you are now — Vitamin D, fasting insulin, fasting glucose, cholesterol ratios — with arrows showing whether things are improving.</div>
             </div>
           </div>
           <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🔗</div>
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">🔗</div>
             <div>
               <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Food & symptom connections</div>
               <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">ThriveIQ spots patterns hiding in months of daily life — like bloating logged on days dairy was consumed, 71% of the time.</div>
             </div>
           </div>
           <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:36px;height:36px;border-radius:50%;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">💊</div>
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(29,158,117,0.15);border:1px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">💊</div>
             <div>
               <div style="font-size:14px;font-weight:600;color:white;margin-bottom:4px;">Everything you're taking — and how it's working</div>
               <div style="font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;">Every med and supplement with dose, timing, and compliance rate — plus educational notes to help you ask better questions.</div>
@@ -1007,7 +1053,7 @@ function submitWaitlist(e) {
           </div>
         </div>
         <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
-          <span style="background:rgba(29,158,117,0.12);border:1px solid rgba(29,158,117,0.3);color:#1D9E75;padding:6px 14px;border-radius:100px;font-size:11px;font-family:'Courier New',monospace;font-weight:600;">30-day report FREE</span>
+          <span style="background:rgba(29,158,117,0.12);border:1px solid rgba(29,158,117,0.3);color:#1D9E75;padding:6px 14px;border-radius:8px;font-size:11px;font-family:'Courier New',monospace;font-weight:600;">30-day report</span>
           
         </div>
       </div>
@@ -1051,7 +1097,7 @@ function submitWaitlist(e) {
       </div>
     </div>
     <div style="text-align:center;margin-top:32px;">
-      <a href="thriveiq-doctor-report-template.html" target="_blank" style="display:inline-block;background:#1D9E75;color:white;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;font-family:'DM Sans',sans-serif;">View Full Sample Journal →</a>
+      <a href="thriveiq-doctor-report-template.html" target="_blank" style="display:inline-block;background:#1D9E75;color:white;padding:14px 32px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;font-family:'DM Sans',sans-serif;">View Full Sample Journal →</a>
       <p style="margin-top:12px;font-size:12px;color:rgba(255,255,255,0.3);font-family:'Courier New',monospace;">Included free with every ThriveIQ plan</p>
     </div>
   </div>
@@ -1067,9 +1113,9 @@ function submitWaitlist(e) {
       <a href="#" class="btn-secondary">All Posts →</a>
     </div>
     <div class="blog-grid">
-      <a href="thriveiq-blog-cgm.html" class="blog-card"><div class="blog-card-img" style="background:#0A0A0F;display:flex;align-items:center;justify-content:center;overflow:hidden"><div style="width:110px;height:220px;border-radius:18px;overflow:hidden;border:3px solid rgba(29,158,117,0.4);box-shadow:0 8px 24px rgba(0,0,0,0.4);"><img src="images/screenshots/blog-metabolic-health.jpg" alt="ThriveIQ weekly score trend" style="width:100%;height:100%;object-fit:cover;display:block;" /></div></div><div class="blog-card-body"><div class="blog-cat">Metabolic Health</div><h3>Your CGM Is Giving You Incredible Data. Here's How to Read the Full Picture.</h3><p>Stable blood sugar is great news. Here's the one question your glucose data is pointing toward — and how to bring it to your doctor.</p><div class="blog-meta"><span>Jakki</span><span>·</span><span>3 min read</span></div></div></a>
+      <a href="thriveiq-blog-cgm.html" class="blog-card"><div class="blog-card-img" style="background:#0A0A0F;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="180" fill="#0A0A0F"/><polyline points="20,140 60,120 90,130 120,80 150,90 180,50 210,70 240,40 280,60 310,30" fill="none" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="180" cy="50" r="5" fill="#1D9E75"/><circle cx="240" cy="40" r="5" fill="#1D9E75"/><line x1="20" y1="155" x2="310" y2="155" stroke="rgba(29,158,117,0.3)" stroke-width="1"/><line x1="20" y1="100" x2="310" y2="100" stroke="rgba(29,158,117,0.15)" stroke-width="1" stroke-dasharray="4,4"/><text x="160" y="172" fill="rgba(29,158,117,0.6)" font-family="Courier New" font-size="9" letter-spacing="2" text-anchor="middle">BLOOD GLUCOSE</text></svg></div><div class="blog-card-body"><div class="blog-cat">Metabolic Health</div><h3>Your CGM Is Giving You Incredible Data. Here's How to Read the Full Picture.</h3><p>Stable blood sugar is great news. Here's the one question your glucose data is pointing toward — and how to bring it to your doctor.</p><div class="blog-meta"><span>Jakki</span><span>·</span><span>3 min read</span></div></div></a>
         <a href="/thriveiq-blog-cholesterol.html" class="blog-card">
-        <div class="blog-card-img" style="background:#0A0A0F;display:flex;align-items:center;justify-content:center;overflow:hidden"><div style="width:110px;height:220px;border-radius:18px;overflow:hidden;border:3px solid rgba(29,158,117,0.4);box-shadow:0 8px 24px rgba(0,0,0,0.4);"><img src="images/screenshots/blog-lab-education.jpg" alt="ThriveIQ lab values and medications" style="width:100%;height:100%;object-fit:cover;display:block;" /></div></div>
+        <div class="blog-card-img" style="background:#0A0A0F;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="180" fill="#0A0A0F"/><circle cx="160" cy="95" r="55" fill="none" stroke="rgba(29,158,117,0.2)" stroke-width="1"/><circle cx="160" cy="95" r="38" fill="none" stroke="rgba(29,158,117,0.3)" stroke-width="1"/><circle cx="160" cy="95" r="20" fill="rgba(29,158,117,0.15)" stroke="#1D9E75" stroke-width="1.5"/><line x1="160" y1="40" x2="160" y2="20" stroke="#1D9E75" stroke-width="2" stroke-linecap="round"/><line x1="207" y1="57" x2="222" y2="47" stroke="#1D9E75" stroke-width="2" stroke-linecap="round"/><line x1="215" y1="95" x2="235" y2="95" stroke="#1D9E75" stroke-width="2" stroke-linecap="round"/><text x="160" y="99" fill="#1D9E75" font-family="Courier New" font-size="10" letter-spacing="1" text-anchor="middle">FIRE</text><text x="160" y="165" fill="rgba(29,158,117,0.6)" font-family="Courier New" font-size="9" letter-spacing="2" text-anchor="middle">INFLAMMATION</text></svg></div>
         <div class="blog-card-body">
           <div class="blog-cat">Heart Health</div>
           <h3>Why Your Cholesterol Isn't the Problem — The Fire Is</h3>
@@ -1096,7 +1142,7 @@ function submitWaitlist(e) {
         </div>
       </a>
       <a href="/thriveiq-blog-seed-oils.html" class="blog-card">
-        <div class="blog-card-img" style="background:#0A0A0F;display:flex;align-items:center;justify-content:center;overflow:hidden"><div style="width:110px;height:220px;border-radius:18px;overflow:hidden;border:3px solid rgba(29,158,117,0.4);box-shadow:0 8px 24px rgba(0,0,0,0.4);"><img src="images/screenshots/blog-food-quality.jpg" alt="ThriveIQ meal plan with high food quality score" style="width:100%;height:100%;object-fit:cover;display:block;" /></div></div>
+        <div class="blog-card-img" style="background:#0A0A0F;display:flex;align-items:center;justify-content:center;overflow:hidden"><svg viewBox="0 0 320 180" width="320" height="180" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="180" fill="#0A0A0F"/><rect x="90" y="40" width="140" height="90" rx="4" fill="rgba(29,158,117,0.08)" stroke="rgba(29,158,117,0.3)" stroke-width="1.5"/><rect x="90" y="40" width="140" height="22" rx="4" fill="rgba(29,158,117,0.2)" stroke="none"/><text x="160" y="56" fill="#1D9E75" font-family="Courier New" font-size="9" letter-spacing="1" text-anchor="middle">THRIVEIQ SCORE</text><rect x="105" y="72" width="110" height="8" rx="2" fill="rgba(29,158,117,0.15)" stroke="none"/><rect x="105" y="72" width="28" height="8" rx="2" fill="#1D9E75" stroke="none"/><text x="220" y="79" fill="rgba(255,255,255,0.4)" font-family="Courier New" font-size="8" text-anchor="end">22 / 100</text><rect x="105" y="90" width="110" height="8" rx="2" fill="rgba(29,158,117,0.15)" stroke="none"/><rect x="105" y="90" width="18" height="8" rx="2" fill="#1D9E75" stroke="none"/><text x="220" y="97" fill="rgba(255,255,255,0.4)" font-family="Courier New" font-size="8" text-anchor="end">CANOLA OIL</text><rect x="105" y="108" width="110" height="8" rx="2" fill="rgba(29,158,117,0.15)" stroke="none"/><rect x="105" y="108" width="14" height="8" rx="2" fill="#1D9E75" stroke="none"/><text x="220" y="115" fill="rgba(255,255,255,0.4)" font-family="Courier New" font-size="8" text-anchor="end">SOYBEAN OIL</text><text x="160" y="165" fill="rgba(29,158,117,0.6)" font-family="Courier New" font-size="9" letter-spacing="2" text-anchor="middle">FOOD QUALITY</text></svg></div>
         <div class="blog-card-body">
           <div class="blog-cat">Food Quality</div>
           <h3>Seed Oils: Why They Score So Low in ThriveIQ</h3>
@@ -1180,7 +1226,7 @@ Our Mission</div>
 
 <!-- NEWSLETTER -->
 <div class="newsletter-bar">
-  <p>🌿 Get weekly food-as-medicine insights from ThriveIQ</p>
+  <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg> Get weekly food-as-medicine insights from ThriveIQ</p>
   <div class="newsletter-form">
     <input type="email" class="newsletter-input" placeholder="your@email.com">
     <button class="newsletter-btn">Subscribe</button>
@@ -1190,15 +1236,14 @@ Our Mission</div>
 <!-- DOWNLOAD -->
 <section class="download" id="download">
   <div class="download-inner">
-    <div class="download-badge">🚀 Now Available on iOS</div>
+    <div class="download-badge">🚀 Launching soon on the App Store</div>
     <h2>It's not in your head.<br/><em>It's on your plate.</em></h2>
-    <p>Download ThriveIQ free. Snap your first meal. Get your food quality score in seconds. For everyone who has been dismissed, overlooked, and told their tests are normal.</p>
+    <p>Join the waitlist to be first in line. Snap your first meal. Get your food quality score in seconds. For everyone who has been dismissed, overlooked, and told their tests are normal.</p>
     <div class="download-btns">
-      <a href="#" class="app-store-btn">
-        <span class="app-store-btn-icon">🍎</span>
+      <a href="#waitlist-banner" class="app-store-btn">
         <div class="app-store-btn-text">
-          <span class="app-store-btn-sub">Download on the</span>
-          <span class="app-store-btn-name">App Store</span>
+          <span class="app-store-btn-sub">Join the</span>
+          <span class="app-store-btn-name">Waitlist</span>
         </div>
       </a>
     </div>
@@ -1211,14 +1256,21 @@ Our Mission</div>
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#" class="nav-logo">
-    <img src="images/logo-icon.png" alt="ThriveIQ logo" style="width:44px;height:44px;margin-right:10px;border-radius:8px;display:block;" /><span style="font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:700;letter-spacing:-0.5px;color:#FFFFFF;">Thrive<span style="color:#1D9E75;">IQ</span></span>
+    <svg width="24" height="30" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:4px">
+      <path d="M60 8 C36 28 24 62 38 92 C48 112 72 116 82 96 C96 66 88 28 60 8Z" fill="#1D9E75" opacity="0.15"/>
+      <path d="M60 8 C36 28 24 62 38 92 C48 112 72 116 82 96 C96 66 88 28 60 8Z" stroke="#1D9E75" stroke-width="5" stroke-linejoin="round"/>
+      <line x1="60" y1="14" x2="60" y2="108" stroke="#1D9E75" stroke-width="2.5" opacity="0.35" stroke-dasharray="6 5"/>
+      <polyline points="14,62 30,62 42,38 52,86 60,52 68,72 78,62 106,62" stroke="#1D9E75" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="42" cy="38" r="8" fill="#1D9E75"/>
+    </svg>
+    Thrive<span style="color:#1D9E75">IQ</span>
   </a>
-        <p>It's not in your head. It's on your plate.<br/><span style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;font-family:'DM Mono',monospace;color:#1D9E75;">Stop guessing. Start thriving.</span></p>
+        <p>It's not in your head. It's on your plate.<br/><span style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;font-family:'DM Mono',monospace;opacity:0.5;">Stop guessing. Start thriving.</span></p>
       </div>
       <div class="footer-col">
         <h4>App</h4>
         <ul>
-          <li><a href="#">Download</a></li>
+          <li><a href="#waitlist-banner">Join Waitlist</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="#">Changelog</a></li>
