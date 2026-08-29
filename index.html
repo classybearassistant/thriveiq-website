@@ -156,15 +156,19 @@
     position: relative; display: flex; justify-content: center; align-items: center;
   }
   .phone-mockup {
-    width: 260px; height: 520px; background: var(--charcoal);
+    width: 280px; height: 600px; background: var(--charcoal);
     border-radius: 44px; position: relative; overflow: hidden;
     box-shadow: 0 40px 80px rgba(0,0,0,0.2), 0 0 0 8px rgba(255,255,255,0.8);
   }
   .phone-screen {
     position: absolute; inset: 0;
-    background: linear-gradient(160deg, #0A0A0F 0%, #111118 100%);
+    background: #0A0A0F;
     padding: 50px 20px 20px;
-    display: flex; flex-direction: column; gap: 12px;
+    overflow: hidden;
+  }
+  .phone-screenshot {
+    width: 100%; height: 100%; object-fit: cover; object-position: top;
+    border-radius: 8px; display: block;
   }
   .phone-notch {
     position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
@@ -754,58 +758,8 @@ function submitWaitlist(e) {
       <div class="phone-mockup">
         <div class="phone-notch"></div>
         <div class="phone-screen">
-          <div class="phone-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg> Track</div>
-          <div class="phone-title" style="font-size:13px;margin-bottom:10px">Capture what you eat</div>
-          <div style="display:flex;flex-direction:column;align-items:center;margin-bottom:10px">
-            <svg width="110" height="110" viewBox="0 0 110 110">
-              <circle cx="55" cy="55" r="46" fill="none" stroke="rgba(29,158,117,0.15)" stroke-width="10"/>
-              <circle cx="55" cy="55" r="46" fill="none" stroke="#1D9E75" stroke-width="10" stroke-linecap="round"
-                stroke-dasharray="289" stroke-dashoffset="72" transform="rotate(-90 55 55)"/>
-              <text x="55" y="50" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="22" font-weight="700">87</text>
-              <text x="55" y="64" text-anchor="middle" fill="#1D9E75" font-family="Georgia,serif" font-size="9">ThriveIQ Score</text>
-              <text x="55" y="76" text-anchor="middle" fill="#1D9E75" font-family="Courier New,monospace" font-size="8" letter-spacing="1">STRONG</text>
-            </svg>
-            <div style="font-size:9px;color:rgba(255,255,255,0.4);font-family:Courier New,monospace;margin-top:2px">Aim for 70+ today</div>
-          </div>
-          <div class="phone-score-card">
-            <div class="phone-score-ring" style="width:32px;height:32px;font-size:11px">87</div>
-            <div class="phone-score-info">
-              <div class="phone-score-name">Grass-fed Ribeye + Roasted Veg</div>
-              <div class="phone-score-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg> Strong · 12:34 PM</div>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;margin-top:8px;padding:0 4px">
-            <div style="background:rgba(29,158,117,0.15);border-radius:8px;padding:6px 4px;text-align:center">
-              <div style="font-size:14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:-2px"><g transform="scale(-1,1) translate(-24,0)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z" fill="#1D9E75" fill-opacity="0.9"/></g></svg></div>
-              <div style="font-size:8px;color:#1D9E75;font-family:Courier New,monospace">Thriving</div>
-            </div>
-            <div style="background:rgba(232,168,56,0.15);border-radius:8px;padding:6px 4px;text-align:center">
-              <div style="font-size:14px">🙂</div>
-              <div style="font-size:8px;color:#E8A838;font-family:Courier New,monospace">Pretty good</div>
-            </div>
-            <div style="background:rgba(232,149,109,0.15);border-radius:8px;padding:6px 4px;text-align:center">
-              <div style="font-size:14px">😴</div>
-              <div style="font-size:8px;color:#E8956D;font-family:Courier New,monospace">Tired</div>
-            </div>
-            <div style="background:rgba(196,107,90,0.15);border-radius:8px;padding:6px 4px;text-align:center">
-              <div style="font-size:14px">😞</div>
-              <div style="font-size:8px;color:#C46B5A;font-family:Courier New,monospace">Not great</div>
-            </div>
-          </div>
+          <img class="phone-screenshot" src="images/screenshots/hero-today-snapshot.jpg" alt="ThriveIQ Today tab showing ThriveIQ Score and Today's Snapshot"/>
         </div>
-      </div>
-      <div class="hero-float-1">
-        <span style="font-size:20px"></span>
-        <div>
-          <div style="font-size:11px;color:#6B6B6B">THRIVEIQ SCORE</div>
-          <div style="font-size:18px;font-weight:800;color:#1D9E75;font-family:'DM Mono',monospace">87</div>
-          <div style="font-size:10px;color:#1D9E75">&#127807; Strong</div>
-        </div>
-      </div>
-      <div class="hero-float-2">
-        <div style="font-size:11px;color:#9B9B9B;font-family:'DM Mono',monospace;margin-bottom:2px">FOOD QUALITY TODAY</div>
-        <div class="float-score">82<span style="font-size:13px;font-weight:400;color:#9B9B9B">/100</span></div>
-        <div style="font-size:11px;color:#7A9E7E;margin-top:2px">↑ Up from 58 last week</div>
       </div>
     </div>
   </div>
